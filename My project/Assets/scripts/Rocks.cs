@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -16,6 +17,8 @@ public class Rocks : MonoBehaviour
 
     public HealthBar HealthBar;
 
+    public GameObject text;
+
     int rock1Chance = 0;
     int rock2Chance = 0;
     int rock3Chance = 0;
@@ -24,6 +27,7 @@ public class Rocks : MonoBehaviour
     int size3Chance = 0;
     int size4Chance = 0;
     int size5Chance = 0;
+    int size6Chance = 0;
 
     manager managerVariables;
 
@@ -70,9 +74,10 @@ public class Rocks : MonoBehaviour
         if (distance > 50) size3Chance = distance / 2;
         if (distance > 200) size4Chance = distance / 6;
         if (distance > 500) size5Chance = distance / 20;
+        if (distance > 800) size6Chance = distance / 30;
 
-
-        if (size5Chance >= rnd) Size = 5;
+        if (size6Chance >= rnd) Size = 6;
+        else if (size5Chance >= rnd) Size = 5;
         else if (size4Chance >= rnd) Size = 4;
         else if (size3Chance >= rnd) Size = 3;
         else Size = 2;
@@ -97,16 +102,29 @@ public class Rocks : MonoBehaviour
 
         if (Health <= 0)
         {
+            int[] Mat = new int[5] { 0, 0, 0, 0, 0 };
+
             Size--;
             managerVariables.PlayerStats.Materials[Hardness+1] += (int)Size;
-            if(Size > 1 && Hardness > 0)
+            Mat[Hardness] += (int)Size;
+
+            if (Size > 1 && Hardness > 0)
             {
-                for (int i = 1; i < Size; i++)
+                for (int i = 1; i < Hardness+1; i++)
                 {
+                    if(i > Size) continue;
                     managerVariables.PlayerStats.Materials[i] += (int)Size - i;
+                    Mat[i-1] += (int)Size - i;
                 }
             }
+            text.gameObject.transform.GetChild(0).GetComponent<TextMeshPro>().text = "";
+            if (Mat[4] != 0) text.gameObject.transform.GetChild(0).GetComponent<TextMeshPro>().text += "+ " + Mat[4].ToString() + " dontknow" + System.Environment.NewLine;
+            if (Mat[3] != 0) text.gameObject.transform.GetChild(0).GetComponent<TextMeshPro>().text += "+ " + Mat[3].ToString() + " diamond" + System.Environment.NewLine;
+            if (Mat[2] != 0) text.gameObject.transform.GetChild(0).GetComponent<TextMeshPro>().text += "+ " + Mat[2].ToString() + " gold" + System.Environment.NewLine;
+            if (Mat[1] != 0) text.gameObject.transform.GetChild(0).GetComponent<TextMeshPro>().text += "+ " + Mat[1].ToString() + " iron" + System.Environment.NewLine;
+            if (Mat[0] != 0) text.gameObject.transform.GetChild(0).GetComponent<TextMeshPro>().text += "+ " + Mat[0].ToString() + " stone" + System.Environment.NewLine;
             
+            Instantiate(text, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
