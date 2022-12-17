@@ -13,7 +13,7 @@ public class CameraFollow : MonoBehaviour
     {
         if (target.gameObject.GetComponent<Player>().usingWeapons)
         {
-            if (this.gameObject.GetComponent<Camera>().orthographicSize < 15)
+            if (this.gameObject.GetComponent<Camera>().orthographicSize < 10)
             {
                 this.gameObject.GetComponent<Camera>().orthographicSize += Time.deltaTime * CameraZoomSpeed;
             }
