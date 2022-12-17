@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class manager : MonoBehaviour
 {
+    [SerializeField]
+    GameObject rock;
+
     // Start is called before the first frame update
     public bool raid = false;
     int dayTime = 0;
@@ -23,7 +26,10 @@ public class manager : MonoBehaviour
     public Player PlayerStats = new Player();
     void Start()
     {
-        
+        for(int i = 0; i < 1000; i += 10)
+        {
+            Instantiate(rock, new Vector3(i, 0, 0), Quaternion.identity);
+        }
     }
 
     // Update is called once per frame
