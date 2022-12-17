@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class manager : MonoBehaviour
@@ -40,19 +41,19 @@ public class manager : MonoBehaviour
     {
         for (float i = 10; i < 1000; i += 17 - Mathf.Sqrt(Random.Range(1f, 256f)))
         {
-            Instantiate(rock, new Vector3(i, 0, 0), Quaternion.identity);
+            Instantiate(rock, new Vector3(i, 0, 0), Quaternion.identity).transform.SetParent(GameObject.Find("Rocks").gameObject.transform);
         }
         for (float i = 10; i < 1000; i += 17 - Mathf.Sqrt(Random.Range(1f, 256f)))
         {
-            Instantiate(rock, new Vector3(-i, 0, 0), Quaternion.identity);
+            Instantiate(rock, new Vector3(-i, 0, 0), Quaternion.identity).transform.SetParent(GameObject.Find("Rocks").gameObject.transform); ;
         }
         for (float i = 12; i < 1000; i += Random.Range(2f, 8f))
         {
-            Instantiate(coal, new Vector3(i, 0, -1), Quaternion.identity);
+            Instantiate(coal, new Vector3(i, 0, -1), Quaternion.identity).transform.SetParent(GameObject.Find("Rocks").gameObject.transform); ;
         }
         for (float i = 12; i < 1000; i += Random.Range(2f, 8f))
         {
-            Instantiate(coal, new Vector3(-i, 0, -1), Quaternion.identity);
+            Instantiate(coal, new Vector3(-i, 0, -1), Quaternion.identity).transform.SetParent(GameObject.Find("Rocks").gameObject.transform); ;
         }
 
         spawner = GameObject.Find("Spawner");
