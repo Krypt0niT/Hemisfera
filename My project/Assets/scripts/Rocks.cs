@@ -57,7 +57,8 @@ public class Rocks : MonoBehaviour
         else
         {
             Hardness = 0;
-            GetComponent<SpriteRenderer>().sprite = Materials[0];
+            if(Random.Range(1, 100) > 50)GetComponent<SpriteRenderer>().sprite = Materials[0];
+            else GetComponent<SpriteRenderer>().sprite = Materials[5];
         }
 
         //=== Size ===//
@@ -82,7 +83,7 @@ public class Rocks : MonoBehaviour
         float Scale = 2 / (5/Size) * 1.5f;
         transform.position = new Vector3(transform.position.x,-3 + Scale/2, transform.position.z);
         transform.localScale = new Vector3(Scale, Scale, Scale);
-
+        if (Random.Range(1, 100) > 50) transform.rotation = Quaternion.Euler(0, 180, 0);
         HealthBar.SetHealth(Health, MaxHealth);
     }
 

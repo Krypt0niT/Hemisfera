@@ -48,6 +48,7 @@ public class Coals : MonoBehaviour
         float Scale = 2 / (5 / Size);
         transform.position = new Vector3(transform.position.x, -3 + Scale / 2, transform.position.z);
         transform.localScale = new Vector3(Scale, Scale, Scale);
+        if(Random.Range(1, 100) > 50) transform.rotation = Quaternion.Euler(0, 180, 0);
         GetComponent<SpriteRenderer>().sprite = Material;
         HealthBar.SetHealth(Health, MaxHealth);
     }
