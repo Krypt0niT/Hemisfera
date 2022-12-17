@@ -29,6 +29,8 @@ public class manager : MonoBehaviour
     public class Player
     {
         public float speed = 5f;
+        List<int> materials = new List<int>(); 
+
     }
     public Player PlayerStats = new Player();
     void Start()
