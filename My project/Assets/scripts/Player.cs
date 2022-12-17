@@ -49,14 +49,14 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(controls.PlayerLeft))
+        if (controls.PlayerLeft)
         {
             moveX = -1;
             playerRotation = 180;
             animState = "running";
         }
             
-        else if (Input.GetKey(controls.PlayerRight))
+        else if (controls.PlayerRight)
         {
             moveX = 1;
             playerRotation = 0;
@@ -121,7 +121,7 @@ public class Player : MonoBehaviour
         {
             WeaponsHint.GetComponent<TextMeshPro>().enabled = true;
             
-            if (Input.GetKeyDown(controls.PlayerUse))
+            if (controls.PlayerUse)
             {
                 if (!usingWeapons)
                     usingWeapons = true;
@@ -130,7 +130,8 @@ public class Player : MonoBehaviour
 
             }
         }
-        if (other.gameObject.name == "ArmorUpgradeStation")
+
+        else if (other.gameObject.name == "ArmorUpgradeStation")
         {
             ArmorHint.GetComponent<TextMeshPro>().enabled = true;
 
@@ -143,6 +144,15 @@ public class Player : MonoBehaviour
 
             }
         }
+        else if (other.gameObject.tag == "Rock")
+        {
+            other.gameObject.GetComponentInChildren<HealthBar>().slider.gameObject.SetActive(true);
+            if (controls.PlayerAttack)
+            {
+                other.gameObject.GetComponent<Rocks>().TakeHit(5);
+
+            }
+        }
     }
     private void OnTriggerExit(Collider other)
     {
@@ -151,10 +161,17 @@ public class Player : MonoBehaviour
             WeaponsHint.GetComponent<TextMeshPro>().enabled = false;
             usingWeapons = false;
         }
-        if (other.gameObject.name == "ArmorUpgradeStation")
+
+        else if (other.gameObject.name == "ArmorUpgradeStation")
         {
             ArmorHint.GetComponent<TextMeshPro>().enabled = false;
             usingArmor = false;
+        }
+        
+        else if (other.gameObject.tag == "Rock")
+        {
+            other.gameObject.GetComponentInChildren<HealthBar>().slider.gameObject.SetActive(false);
+
         }
     }
 }

@@ -7,18 +7,20 @@ using UnityEngine.UIElements;
 public class Rocks : MonoBehaviour
 {
     [SerializeField]
-    public int MaxHealth;
-    public int Health;
+    public float MaxHealth;
+    public float Health;
     public int Hardness;
-    public float Size;
+    public int Size;
     public Sprite[] Materials;
     public int distance;
+
+    public HealthBar HealthBar;
 
     int rock1Chance;
     int rock2Chance;
     int rock3Chance;
     int rock4Chance;
-
+     
     private void Start()
     {
         distance = Mathf.Abs((int)transform.position.x);
@@ -59,5 +61,18 @@ public class Rocks : MonoBehaviour
         float Scale = 2 / (5/Size);
         transform.position = new Vector3(transform.position.x,-3 + Scale/2, transform.position.z);
         transform.localScale = new Vector3(Scale, Scale, Scale);
+
+        HealthBar.SetHealth(Health, MaxHealth);
+    }
+
+    public void TakeHit(float damage)
+    {
+        Health -= damage;
+        HealthBar.SetHealth(Health, MaxHealth);
+
+        if (Health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
