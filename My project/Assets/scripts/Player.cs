@@ -10,12 +10,15 @@ public class Player : MonoBehaviour
     CharacterController chc;
     manager managerVariables;
     GameObject WeaponsHint;
+    GameObject ArmorHint;
     SpriteRenderer PlayerRend;
     CameraFollow CF;
 
     int playerRotation = 0;
     string animState = "idle";
     public bool usingWeapons = false;
+    public bool usingArmor = false;
+
 
     [SerializeField] List<Sprite> Beh = new List<Sprite>();
     float behTick = 0;
@@ -39,6 +42,7 @@ public class Player : MonoBehaviour
         chc = this.gameObject.GetComponent<CharacterController>();
         PlayerRend = this.gameObject.GetComponent<SpriteRenderer>();
         WeaponsHint = GameObject.Find("WeaponsHint");
+        ArmorHint = GameObject.Find("ArmorHint");
         CF = GameObject.Find("Main Camera").GetComponent<CameraFollow>();
     }
 
@@ -126,6 +130,19 @@ public class Player : MonoBehaviour
 
             }
         }
+        if (other.gameObject.name == "ArmorUpgradeStation")
+        {
+            ArmorHint.GetComponent<TextMeshPro>().enabled = true;
+
+            if (Input.GetKeyDown(controls.PlayerUse))
+            {
+                if (!usingArmor)
+                    usingArmor = true;
+                else
+                    usingArmor = false;
+
+            }
+        }
     }
     private void OnTriggerExit(Collider other)
     {
@@ -133,6 +150,11 @@ public class Player : MonoBehaviour
         {
             WeaponsHint.GetComponent<TextMeshPro>().enabled = false;
             usingWeapons = false;
+        }
+        if (other.gameObject.name == "ArmorUpgradeStation")
+        {
+            ArmorHint.GetComponent<TextMeshPro>().enabled = false;
+            usingArmor = false;
         }
     }
 }
