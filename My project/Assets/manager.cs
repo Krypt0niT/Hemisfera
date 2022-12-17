@@ -26,6 +26,7 @@ public class manager : MonoBehaviour
     public Player PlayerStats = new Player();
     void Start()
     {
+        /*
         for (int i = 20; i < 1000; i += Random.Range(10, 30))
         {
             Instantiate(rock, new Vector3(i, 0, 0), Quaternion.identity);
@@ -33,7 +34,7 @@ public class manager : MonoBehaviour
         for (int i = 20; i < 1000; i += Random.Range(10, 30))
         {
             Instantiate(rock, new Vector3(-i, 0, 0), Quaternion.identity);
-        }
+        }*/
     }
 
     // Update is called once per frame
