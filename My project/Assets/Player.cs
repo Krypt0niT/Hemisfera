@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -8,12 +9,13 @@ public class Player : MonoBehaviour
     Controls controls;
     CharacterController chc;
     manager managerVariables;
-
+    GameObject WeaponsHint;
     SpriteRenderer PlayerRend;
+    CameraFollow CF;
 
     int playerRotation = 0;
     string animState = "idle";
-
+    public bool usingWeapons = false;
 
     [SerializeField] List<Sprite> Beh = new List<Sprite>();
     float behTick = 0;
@@ -36,6 +38,8 @@ public class Player : MonoBehaviour
         managerVariables = managerObject.GetComponent<manager>();
         chc = this.gameObject.GetComponent<CharacterController>();
         PlayerRend = this.gameObject.GetComponent<SpriteRenderer>();
+        WeaponsHint = GameObject.Find("WeaponsHint");
+        CF = GameObject.Find("Main Camera").GetComponent<CameraFollow>();
     }
 
     // Update is called once per frame
@@ -106,5 +110,29 @@ public class Player : MonoBehaviour
             }
         }
 
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.name == "WeaponControlPanel")
+        {
+            WeaponsHint.GetComponent<TextMeshPro>().enabled = true;
+            
+            if (Input.GetKeyDown(controls.PlayerUse))
+            {
+                if (!usingWeapons)
+                    usingWeapons = true;
+                else
+                    usingWeapons = false;
+
+            }
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.name == "WeaponControlPanel")
+        {
+            WeaponsHint.GetComponent<TextMeshPro>().enabled = false;
+            usingWeapons = false;
+        }
     }
 }

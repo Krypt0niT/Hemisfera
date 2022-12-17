@@ -43,6 +43,7 @@ public class manager : MonoBehaviour
             if (dayTime == 60)
             {
                 timerBG.GetComponent<SpriteRenderer>().color = Color.red;
+                GameObject.Find("Main Camera").GetComponent<Camera>().backgroundColor = new Color32(63, 40, 41, 255);
                 raid = true;
                 RaidLength++;
                 dayTick = 0;
@@ -53,6 +54,8 @@ public class manager : MonoBehaviour
                     dayTime = 0;
                     timer.GetComponent<TextMeshPro>().text = dayTime.ToString();
                     timerBG.GetComponent<SpriteRenderer>().color = Color.green;
+                    GameObject.Find("Main Camera").GetComponent<Camera>().backgroundColor = new Color32(68, 116, 153, 255);
+
                 }
             }
             else
@@ -61,6 +64,8 @@ public class manager : MonoBehaviour
                 dayTick = 0;
                 timer.GetComponent<TextMeshPro>().text = dayTime.ToString();
                 timerBG.GetComponent<SpriteRenderer>().color = Color.green;
+                GameObject.Find("Main Camera").GetComponent<Camera>().backgroundColor = new Color32(68, 116, 153, 255);
+
             }
         }
         
