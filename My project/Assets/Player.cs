@@ -28,8 +28,7 @@ public class Player : MonoBehaviour
         else
             moveX = 0;
 
-        chc.Move(new Vector3(moveX,0,0) * Time.deltaTime * 5);
-
+        chc.Move(new Vector3(moveX,0,0) * Time.deltaTime * managerVariables.PlayerStats.speed);
 
 
     }

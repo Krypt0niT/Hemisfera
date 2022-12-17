@@ -11,7 +11,7 @@ public class manager : MonoBehaviour
     {
         public float speed = 10f;
     }
-    public Player PlayerStats;
+    public Player PlayerStats = new Player();
     void Start()
     {
         
@@ -20,6 +20,5 @@ public class manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 }
