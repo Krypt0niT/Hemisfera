@@ -15,9 +15,9 @@ public class Controls : MonoBehaviour
     public bool PlayerAttack;
     private void Update()
     {
-        PlayerRight = Input.GetKey(PlayerRightKey);
-        PlayerLeft = Input.GetKey(PlayerLeftKey);
-        PlayerUse = Input.GetKeyDown(PlayerUseKey);
         PlayerAttack = Input.GetKey(PlayerAttackKey);
+        PlayerRight = Input.GetKey(PlayerRightKey) && !PlayerAttack;
+        PlayerLeft = Input.GetKey(PlayerLeftKey) && !PlayerAttack;
+        PlayerUse = Input.GetKeyDown(PlayerUseKey);
     }
 }
