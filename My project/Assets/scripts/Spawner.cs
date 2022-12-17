@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
+    [SerializeField] GameObject enemy;
+    [SerializeField] List<GameObject> spawnPointy = new List<GameObject>();
     // Start is called before the first frame update
     void Start()
     {
@@ -15,4 +17,21 @@ public class Spawner : MonoBehaviour
     {
         
     }
+    public void spawn(int count,float strengh)
+    {
+        
+        int rnd = Random.Range(0,5);
+        if (rnd >= 3)
+        {
+            Instantiate(enemy, spawnPointy[rnd].gameObject.transform.position + new Vector3(Random.Range(-2,2), Random.Range(-2, 2), Random.Range(-2, 2)), Quaternion.identity * Quaternion.Euler(0,180,0)).transform.SetParent(GameObject.Find("Enemies").gameObject.transform);
+        }
+        else
+        {
+            Instantiate(enemy, spawnPointy[rnd].gameObject.transform.position, Quaternion.identity).transform.SetParent(GameObject.Find("Enemies").gameObject.transform);
+
+        }
+
+
+    }
+
 }

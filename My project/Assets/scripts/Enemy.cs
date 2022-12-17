@@ -6,8 +6,8 @@ public class Enemy : MonoBehaviour
 {
     SpriteRenderer EnemyRend;
     string animState = "Pohyb";
-
-
+    float speed = 2;
+    bool finish = false;
 
 
     [SerializeField] List<Sprite> Pohyb = new List<Sprite>();
@@ -23,6 +23,21 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
+        if (!finish)
+        {
+            if (transform.position.x < 0)
+            {
+                transform.position = new Vector3(transform.position.x +(speed * Time.deltaTime), transform.position.y,transform.position.z);
+            }
+            else
+            {
+                transform.position = new Vector3(transform.position.x - (speed * Time.deltaTime), transform.position.y, transform.position.z);
+
+            }
+        }
+
+
+
 
 
 
@@ -45,6 +60,15 @@ public class Enemy : MonoBehaviour
                 }
 
             }
+
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name == "AttackArea")
+        {
+            print("bravcova rit");
+            finish = true;
         }
     }
 }

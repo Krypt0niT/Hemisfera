@@ -12,11 +12,13 @@ public class manager : MonoBehaviour
 
     // Start is called before the first frame update
     public bool raid = false;
-    int dayTime = 0;
+    int dayTime = 50;
     float dayTick = 0;
+    float raidSpawner = 0;
+    int raidSpawned = 0;
 
-    int RaidTime = 20;
-    int RaidLength = 0;
+    int RaidPower = 50;
+    int enemyAlive = 0;
     
 
     public float BulletDamage = 5;
@@ -26,6 +28,7 @@ public class manager : MonoBehaviour
 
     [SerializeField] GameObject timer;
     [SerializeField] GameObject timerBG;
+    GameObject spawner;
     public class Player
     {
         public float speed = 5f;
@@ -52,6 +55,7 @@ public class manager : MonoBehaviour
             Instantiate(coal, new Vector3(-i, 0, -1), Quaternion.identity);
         }
 
+        spawner = GameObject.Find("Spawner");
     }
 
     // Update is called once per frame
@@ -64,18 +68,18 @@ public class manager : MonoBehaviour
             
             if (dayTime == 60)
             {
-                timerBG.GetComponent<SpriteRenderer>().color = Color.red;
+                timerBG.GetComponent<SpriteRenderer>().color = new Color32(200,20,20,255);
                 GameObject.Find("Main Camera").GetComponent<Camera>().backgroundColor = new Color32(63, 40, 41, 255);
                 raid = true;
-                RaidLength++;
                 dayTick = 0;
-                if (RaidLength >= RaidTime)
+                enemyAlive = GameObject.Find("Spawner").transform.childCount;
+                if (enemyAlive == 0)
                 {
+
                     raid = false;
-                    RaidLength = 0;
                     dayTime = 0;
                     timer.GetComponent<TextMeshPro>().text = dayTime.ToString();
-                    timerBG.GetComponent<SpriteRenderer>().color = new Color32(34, 135, 15, 255);
+                    timerBG.GetComponent<SpriteRenderer>().color = new Color32(36, 31, 31, 255);
                     GameObject.Find("Main Camera").GetComponent<Camera>().backgroundColor = new Color32(51, 51, 51, 255);
 
                 }
@@ -85,11 +89,26 @@ public class manager : MonoBehaviour
                 dayTime++;
                 dayTick = 0;
                 timer.GetComponent<TextMeshPro>().text = dayTime.ToString();
-                timerBG.GetComponent<SpriteRenderer>().color = new Color32(34,135,15,255);
+                timerBG.GetComponent<SpriteRenderer>().color = new Color32(36, 31, 31, 255);
                 GameObject.Find("Main Camera").GetComponent<Camera>().backgroundColor = new Color32(51, 51, 51, 255);
 
             }
         }
+        if (raid)
+        {
+            if(raidSpawned < RaidPower)
+            {
+                raidSpawner += Time.deltaTime;
+                if (raidSpawner > 1)
+                {
+                    raidSpawned++;
+                    raidSpawner = 0;
+                    spawner.GetComponent<Spawner>().spawn(RaidPower, 1);
+                }
+            }
+            
+        }
+        
         
 
     }
