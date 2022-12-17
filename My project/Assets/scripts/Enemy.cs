@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
 
     float moveOfset = 0;
     float moveOfsetTick = 0;
+    manager managerVariables;
 
     [SerializeField] List<Sprite> Pohyb = new List<Sprite>();
     float pohybTick = 0;
@@ -25,7 +26,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         EnemyRend = this.gameObject.GetComponent<SpriteRenderer>();
-
+        managerVariables = GameObject.Find("Manager").GetComponent<manager>();
     }
 
     void Update()
@@ -109,6 +110,10 @@ public class Enemy : MonoBehaviour
                 else
                 {
                     attackIndex = 0;
+                }
+                if (attackIndex == 3)
+                {
+                    managerVariables.BaseHP--;
                 }
 
             }
