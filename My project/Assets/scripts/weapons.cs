@@ -36,7 +36,8 @@ public class weapons : MonoBehaviour
                     if (fireTick >= managerVariables.fireRate)
                     {
                         fireTick = 0;
-                        Instantiate(bullet, gameObject.transform.Find("Firespot").transform.position, this.gameObject.transform.rotation);
+
+                        Instantiate(bullet, gameObject.transform.Find("Firespot").transform.position, this.gameObject.transform.rotation * Quaternion.Euler(0,0,Random.Range(-5,5f)));
                     }
                     
                 }
@@ -52,7 +53,7 @@ public class weapons : MonoBehaviour
                     if (fireTick >= managerVariables.fireRate)
                     {
                         fireTick = 0;
-                        Instantiate(bullet, gameObject.transform.Find("Firespot").transform.position, this.gameObject.transform.rotation);
+                        Instantiate(bullet, gameObject.transform.Find("Firespot").transform.position, this.gameObject.transform.rotation * Quaternion.Euler(0, 0, Random.Range(-5, 5f)));
                     }
                 }
 
