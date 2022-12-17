@@ -27,6 +27,8 @@ public class manager : MonoBehaviour
     public float fireRate = 0.5f;
 
 
+    public float BaseHP = 100;
+
     [SerializeField] GameObject timer;
     [SerializeField] GameObject timerBG;
     GameObject spawner;
