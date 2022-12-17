@@ -23,8 +23,10 @@ public class Coals : MonoBehaviour
     int size4Chance = 0;
     int size5Chance = 0;
 
+    manager managerVariables;
     private void Start()
     {
+        managerVariables = GameObject.Find("Manager").GetComponent<manager>();
         distance = Mathf.Abs((int)transform.position.x);
 
         //=== Size ===//
@@ -60,6 +62,7 @@ public class Coals : MonoBehaviour
 
         if (Health <= 0)
         {
+            managerVariables.PlayerStats.Materials[0] += (int)Size;
             Destroy(gameObject);
         }
     }

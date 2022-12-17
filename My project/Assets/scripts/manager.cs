@@ -29,7 +29,7 @@ public class manager : MonoBehaviour
     public class Player
     {
         public float speed = 5f;
-        List<int> materials = new List<int>(); 
+        public int[] Materials = new int[6] {0,0,0,0,0,0};
 
     }
     public Player PlayerStats = new Player();
@@ -57,6 +57,12 @@ public class manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        print("Coal: " + PlayerStats.Materials[0].ToString() 
+            + "   stone: " + PlayerStats.Materials[1].ToString() 
+            + "   iron: " + PlayerStats.Materials[2].ToString()
+            + "   gold: " + PlayerStats.Materials[3].ToString()
+            + "   dia: " + PlayerStats.Materials[4].ToString()
+            + "   haluz: " + PlayerStats.Materials[5].ToString());
         dayTick += Time.deltaTime;
         if (dayTick >= 1)
         {

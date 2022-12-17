@@ -25,8 +25,11 @@ public class Rocks : MonoBehaviour
     int size4Chance = 0;
     int size5Chance = 0;
 
+    manager managerVariables;
+
     private void Start()
     {
+        managerVariables = GameObject.Find("Manager").GetComponent<manager>();
         distance = Mathf.Abs((int)transform.position.x);
 
         //=== Hardness ===//
@@ -94,6 +97,16 @@ public class Rocks : MonoBehaviour
 
         if (Health <= 0)
         {
+            Size--;
+            managerVariables.PlayerStats.Materials[Hardness+1] += (int)Size;
+            if(Size > 1 && Hardness > 0)
+            {
+                for (int i = 1; i < Size; i++)
+                {
+                    managerVariables.PlayerStats.Materials[i] += (int)Size - i;
+                }
+            }
+            
             Destroy(gameObject);
         }
     }

@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
     float idleSpeed = 5;
     int idleIndex = 0;
 
-    int damage = 100;
+    int damage = 1000;
 
 
     float moveX = 0;
@@ -46,7 +46,6 @@ public class Player : MonoBehaviour
         CF = GameObject.Find("Main Camera").GetComponent<CameraFollow>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (controls.PlayerLeft)
