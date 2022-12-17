@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Coals : MonoBehaviour
@@ -14,6 +15,8 @@ public class Coals : MonoBehaviour
 
     public HealthBar HealthBar;
 
+    public GameObject text;
+
     int rock1Chance = 0;
     int rock2Chance = 0;
     int rock3Chance = 0;
@@ -23,8 +26,10 @@ public class Coals : MonoBehaviour
     int size4Chance = 0;
     int size5Chance = 0;
 
+    manager managerVariables;
     private void Start()
     {
+        managerVariables = GameObject.Find("Manager").GetComponent<manager>();
         distance = Mathf.Abs((int)transform.position.x);
 
         //=== Size ===//
@@ -60,6 +65,9 @@ public class Coals : MonoBehaviour
 
         if (Health <= 0)
         {
+            managerVariables.PlayerStats.Materials[0] += (int)Size - 1;
+            text.gameObject.transform.GetChild(0).GetComponent<TextMeshPro>().text = "+ " + ((int)Size - 1).ToString() + " coal";
+            Instantiate(text,transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

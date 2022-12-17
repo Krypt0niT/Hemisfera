@@ -119,6 +119,7 @@ MonoBehaviour:
   Material: {fileID: 21300000, guid: d3c70bdc506903a4788bdf946f3c6b05, type: 3}
   distance: 0
   HealthBar: {fileID: 4595402389228223553}
+  text: {fileID: 2203248565779913624, guid: a84e3d0443dbf78448d80a5562dce235, type: 3}
 --- !u!1 &4595402389000429436
 GameObject:
   m_ObjectHideFlags: 0
