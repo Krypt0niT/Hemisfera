@@ -19,6 +19,15 @@ public class Player : MonoBehaviour
     float behTick = 0;
     float behSpeed = 7;
     int behIndex = 0;
+
+    [SerializeField] List<Sprite> Idle = new List<Sprite>();
+    float idleTick = 0;
+    float idleSpeed = 5;
+    int idleIndex = 0;
+
+
+
+
     float moveX = 0;
     void Start()
     {
@@ -78,6 +87,24 @@ public class Player : MonoBehaviour
 
             }
         }
-        
+        if (animState == "idle")
+        {
+            idleTick += Time.deltaTime;
+            if (idleTick >= 1 / idleSpeed)
+            {
+                PlayerRend.sprite = Idle[idleIndex];
+                idleTick = 0;
+                if (idleIndex < Idle.Count - 1)
+                {
+                    idleIndex++;
+                }
+                else
+                {
+                    idleIndex = 0;
+                }
+
+            }
+        }
+
     }
 }

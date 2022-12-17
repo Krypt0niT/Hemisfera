@@ -1300,6 +1300,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f3b671813118d1d4ebdd831b6c08cfeb, type: 3}
   - {fileID: 21300000, guid: d68c51066ca85524cb9d12873161621a, type: 3}
   - {fileID: 21300000, guid: 203306bec53ee734a8ecaa87b4584c4d, type: 3}
+  Idle:
+  - {fileID: 21300000, guid: 7476f8ade3f840b48ada0ffd1d88d114, type: 3}
+  - {fileID: 21300000, guid: 12ac68c617b429d478a165ba702488a6, type: 3}
+  - {fileID: 21300000, guid: 84256c12cb1b08a41b5cb85d3ace3995, type: 3}
+  - {fileID: 21300000, guid: 03bf1e43de1915140bd6b8bdfd53300d, type: 3}
 --- !u!1 &2112223660
 GameObject:
   m_ObjectHideFlags: 0
