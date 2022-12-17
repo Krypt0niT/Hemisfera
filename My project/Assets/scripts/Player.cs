@@ -146,10 +146,10 @@ public class Player : MonoBehaviour
         }
         else if (other.gameObject.tag == "Rock")
         {
-            other.gameObject.GetComponentInChildren<HealthBar>().slider.gameObject.SetActive(true);
+            if(other.gameObject.GetComponent<Rocks>().Health < other.gameObject.GetComponent<Rocks>().MaxHealth) other.gameObject.GetComponentInChildren<HealthBar>().slider.gameObject.SetActive(true);
             if (controls.PlayerAttack)
             {
-                other.gameObject.GetComponent<Rocks>().TakeHit(5);
+                other.gameObject.GetComponent<Rocks>().TakeHit(100 * Time.deltaTime);
 
             }
         }

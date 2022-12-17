@@ -10,26 +10,32 @@ public class Rocks : MonoBehaviour
     public float MaxHealth;
     public float Health;
     public int Hardness;
-    public int Size;
+    public float Size;
     public Sprite[] Materials;
     public int distance;
 
     public HealthBar HealthBar;
 
-    int rock1Chance;
-    int rock2Chance;
-    int rock3Chance;
-    int rock4Chance;
-     
+    int rock1Chance = 0;
+    int rock2Chance = 0;
+    int rock3Chance = 0;
+    int rock4Chance = 0;
+
+    int size3Chance = 0;
+    int size4Chance = 0;
+    int size5Chance = 0;
+
     private void Start()
     {
         distance = Mathf.Abs((int)transform.position.x);
+
+        //=== Hardness ===//
         int rnd = Random.Range(1, 100);
 
-        rock1Chance = distance / 2;
-        rock2Chance = distance / 20;
-        rock3Chance = distance / 50;
-        rock4Chance = distance / 100;
+        if (distance > 50) rock1Chance = distance / 2;
+        if (distance > 150) rock2Chance = distance / 10;
+        if (distance > 350) rock3Chance = distance / 16;
+        if (distance > 600) rock4Chance = distance / 50;
 
         if (rock4Chance >= rnd)
         {
@@ -54,8 +60,23 @@ public class Rocks : MonoBehaviour
             GetComponent<SpriteRenderer>().sprite = Materials[0];
         }
 
+        //=== Size ===//
+        rnd = Random.Range(1, 100);
+
+        if (distance > 50) size3Chance = distance / 2;
+        if (distance > 200) size4Chance = distance / 6;
+        if (distance > 500) size5Chance = distance / 20;
 
 
+        if (size5Chance >= rnd) Size = 5;
+        else if (size4Chance >= rnd) Size = 4;
+        else if (size3Chance >= rnd) Size = 3;
+        else Size = 2;
+
+        //=== HP ===//
+        MaxHealth += (distance * distance) / 100;
+        MaxHealth += (Size - 2) * 100;
+        MaxHealth += Hardness * 200;
 
         Health = MaxHealth;
         float Scale = 2 / (5/Size);
