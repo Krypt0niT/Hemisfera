@@ -23,4 +23,13 @@ public class bullet : MonoBehaviour
         if (bulletTime > 5) { Destroy(this.gameObject); }
         else { transform.position -= transform.right * Time.deltaTime * speed; }
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        print("kolizia");
+        if (other.gameObject.name == "Ground")
+        {
+            Destroy(gameObject);
+        }
+    }
+
 }

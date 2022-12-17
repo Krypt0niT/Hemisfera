@@ -14,6 +14,10 @@ public class Base : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        front.SetActive(true);
+        if (other.gameObject.name == "Player")
+        {
+            front.SetActive(true);
+        }
+            
     }
 }
