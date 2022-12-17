@@ -287,7 +287,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d07db08979fb7a64dbce0b41ca8e97ff, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -315,11 +315,11 @@ MonoBehaviour:
   Hardness: 0
   Size: 5
   Materials:
-  - {fileID: 21300000, guid: 7010a9de4db712f4390577faaacd3548, type: 3}
-  - {fileID: 21300000, guid: b760bf5cfcd56a54c8e22dc678d6853a, type: 3}
-  - {fileID: 21300000, guid: b3953f312b412bb4fb6b4900f7135752, type: 3}
-  - {fileID: 21300000, guid: 0cc173705eb42a8478a72d54e49cc29c, type: 3}
-  - {fileID: 21300000, guid: 99bf1772faeceff40aa60fc33b4dec7c, type: 3}
+  - {fileID: 21300000, guid: d07db08979fb7a64dbce0b41ca8e97ff, type: 3}
+  - {fileID: 21300000, guid: 4a203c1ec8c56b444966549600f2a80f, type: 3}
+  - {fileID: 21300000, guid: 1560f3d1a39fef148b25b308550bd4bd, type: 3}
+  - {fileID: 21300000, guid: 3ff18866fc628ed438f15f328adad053, type: 3}
+  - {fileID: 21300000, guid: 42c226b347bbcb64fbd0de4294a6a5d4, type: 3}
   distance: 0
   HealthBar: {fileID: 6676314753018070847}
 --- !u!65 &6562597738638578190
@@ -333,7 +333,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 2.27}
+  m_Size: {x: 1, y: 1, z: 41.24}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5370900894892153881
 GameObject:

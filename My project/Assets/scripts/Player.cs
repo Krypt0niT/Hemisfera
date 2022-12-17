@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
     float idleSpeed = 5;
     int idleIndex = 0;
 
-
+    int damage = 100;
 
 
     float moveX = 0;
@@ -149,7 +149,16 @@ public class Player : MonoBehaviour
             if(other.gameObject.GetComponent<Rocks>().Health < other.gameObject.GetComponent<Rocks>().MaxHealth) other.gameObject.GetComponentInChildren<HealthBar>().slider.gameObject.SetActive(true);
             if (controls.PlayerAttack)
             {
-                other.gameObject.GetComponent<Rocks>().TakeHit(100 * Time.deltaTime);
+                other.gameObject.GetComponent<Rocks>().TakeHit(damage * Time.deltaTime);
+
+            }
+        }
+        else if (other.gameObject.tag == "Coal")
+        {
+            if (other.gameObject.GetComponent<Coals>().Health < other.gameObject.GetComponent<Coals>().MaxHealth) other.gameObject.GetComponentInChildren<HealthBar>().slider.gameObject.SetActive(true);
+            if (controls.PlayerAttack)
+            {
+                other.gameObject.GetComponent<Coals>().TakeHit(damage * Time.deltaTime);
 
             }
         }
@@ -169,6 +178,11 @@ public class Player : MonoBehaviour
         }
         
         else if (other.gameObject.tag == "Rock")
+        {
+            other.gameObject.GetComponentInChildren<HealthBar>().slider.gameObject.SetActive(false);
+
+        }
+        else if (other.gameObject.tag == "Coal")
         {
             other.gameObject.GetComponentInChildren<HealthBar>().slider.gameObject.SetActive(false);
 

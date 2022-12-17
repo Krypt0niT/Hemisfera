@@ -7,6 +7,8 @@ public class manager : MonoBehaviour
 {
     [SerializeField]
     GameObject rock;
+    [SerializeField]
+    GameObject coal;
 
     // Start is called before the first frame update
     public bool raid = false;
@@ -39,6 +41,15 @@ public class manager : MonoBehaviour
         {
             Instantiate(rock, new Vector3(-i, 0, 0), Quaternion.identity);
         }
+        for (float i = 12; i < 1000; i += Random.Range(2f, 8f))
+        {
+            Instantiate(coal, new Vector3(i, 0, -1), Quaternion.identity);
+        }
+        for (float i = 12; i < 1000; i += Random.Range(2f, 8f))
+        {
+            Instantiate(coal, new Vector3(-i, 0, -1), Quaternion.identity);
+        }
+
     }
 
     // Update is called once per frame

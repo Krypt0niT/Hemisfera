@@ -1387,6 +1387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rock: {fileID: 4642811182256744256, guid: 3214d4bcd7df6fb4092f47864757e75e, type: 3}
+  coal: {fileID: 4595402388730380139, guid: 796ef077557be9646b4ea106217fc2f0, type: 3}
   raid: 0
   BulletDamage: 5
   BulletSpeed: 70
@@ -1588,7 +1589,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1393979595}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.07, y: -20.2337, z: 0}
+  m_LocalPosition: {x: 0.07, y: -20.2337, z: -2}
   m_LocalScale: {x: 2000, y: 34.542778, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1606,7 +1607,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 5.09}
+  m_Size: {x: 1, y: 1, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1503736049
 GameObject:

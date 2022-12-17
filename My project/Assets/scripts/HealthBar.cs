@@ -30,7 +30,8 @@ public class HealthBar : MonoBehaviour
 
     void Update()
     {
-        offset.y = (1.5f + (2 / (5 / GetComponentInParent<Rocks>().Size))) / 2;
+        if(GetComponentInParent<Rocks>()) offset.y = (1.5f + (2 / (5 / GetComponentInParent<Rocks>().Size))) / 2;
+        else offset.y = (1.5f + (2 / (5 / GetComponentInParent<Coals>().Size))) / 2;
         slider.transform.position = Camera.main.WorldToScreenPoint(transform.parent.position + offset);
         text.transform.position = Camera.main.WorldToScreenPoint(transform.parent.position + offset);
 
