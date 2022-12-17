@@ -49,11 +49,11 @@ public class manager : MonoBehaviour
         {
             Instantiate(rock, new Vector3(-i, 0, 0), Quaternion.identity).transform.SetParent(GameObject.Find("Rocks").gameObject.transform); ;
         }
-        for (float i = 12; i < 1000; i += Random.Range(2f, 8f))
+        for (float i = 12; i < 1000; i += Random.Range(2f, 10f))
         {
             Instantiate(coal, new Vector3(i, 0, -1), Quaternion.identity).transform.SetParent(GameObject.Find("Rocks").gameObject.transform); ;
         }
-        for (float i = 12; i < 1000; i += Random.Range(2f, 8f))
+        for (float i = 12; i < 1000; i += Random.Range(2f, 10f))
         {
             Instantiate(coal, new Vector3(-i, 0, -1), Quaternion.identity).transform.SetParent(GameObject.Find("Rocks").gameObject.transform); ;
         }

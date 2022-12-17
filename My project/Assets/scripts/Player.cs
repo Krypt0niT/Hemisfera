@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
     float idleSpeed = 5;
     int idleIndex = 0;
 
-    int damage = 1000;
+    public int damage = 10;
 
 
     float moveX = 0;
