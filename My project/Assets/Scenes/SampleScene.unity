@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.99999946, g: 0.5777502, b: 0.5782623, a: 1}
+  m_IndirectSpecularColor: {r: 0.99999946, g: 0.57776356, b: 0.5782453, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3549,7 +3549,7 @@ MonoBehaviour:
   coal: {fileID: 4595402388730380139, guid: 796ef077557be9646b4ea106217fc2f0, type: 3}
   raid: 0
   BulletDamage: 5
-  BulletSpeed: 70
+  BulletSpeed: 100
   fireRate: 0.5
   timer: {fileID: 1170508036}
   timerBG: {fileID: 439349315}
@@ -5012,7 +5012,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 11, y: 7.54, z: 4.05}
+  m_Size: {x: 10.3, y: 20.87, z: 4.05}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1864902251
 Transform:

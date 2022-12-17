@@ -27,7 +27,7 @@ public class Spawner : MonoBehaviour
         }
         else
         {
-            Instantiate(enemy, spawnPointy[rnd].gameObject.transform.position, Quaternion.identity).transform.SetParent(GameObject.Find("Enemies").gameObject.transform);
+            Instantiate(enemy, spawnPointy[rnd].gameObject.transform.position + new Vector3(Random.Range(-2, 2), Random.Range(-2, 2), Random.Range(-2, 2)), Quaternion.identity).transform.SetParent(GameObject.Find("Enemies").gameObject.transform);
 
         }
 

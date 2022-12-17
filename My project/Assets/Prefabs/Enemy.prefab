@@ -105,6 +105,12 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9a72f6c353b1ced42892a817c266ff16, type: 3}
   - {fileID: 21300000, guid: fec3cb55f930cd84586d94ba8cacdb7c, type: 3}
   - {fileID: 21300000, guid: 57aab52d11266a9499c7b82f8d636ffa, type: 3}
+  Attack:
+  - {fileID: 21300000, guid: 8d3448d77cd1c0e478a34177705f9513, type: 3}
+  - {fileID: 21300000, guid: 927d118260f2d4a418b0a164fdbc2dd2, type: 3}
+  - {fileID: 21300000, guid: 3a654f878ffb71c42aea371ace245d01, type: 3}
+  - {fileID: 21300000, guid: b2de2a424ab6b2f438d06fd9aa151b25, type: 3}
+  - {fileID: 21300000, guid: 56226e9658d642941b6ac0163e3440ec, type: 3}
 --- !u!65 &5305448965949966142
 BoxCollider:
   m_ObjectHideFlags: 0
