@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3a914d8732a132941ae6f1e25eeffee0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d3c70bdc506903a4788bdf946f3c6b05, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -116,7 +116,7 @@ MonoBehaviour:
   Health: 50
   Hardness: 0
   Size: 0
-  Material: {fileID: 21300000, guid: 3a914d8732a132941ae6f1e25eeffee0, type: 3}
+  Material: {fileID: 21300000, guid: d3c70bdc506903a4788bdf946f3c6b05, type: 3}
   distance: 0
   HealthBar: {fileID: 4595402389228223553}
 --- !u!1 &4595402389000429436

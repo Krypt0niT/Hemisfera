@@ -45,7 +45,7 @@ public class Coals : MonoBehaviour
         MaxHealth += (Size - 2) * 100;
 
         Health = MaxHealth;
-        float Scale = 2 / (5 / Size) / 1.5f;
+        float Scale = 2 / (5 / Size);
         transform.position = new Vector3(transform.position.x, -3 + Scale / 2, transform.position.z);
         transform.localScale = new Vector3(Scale, Scale, Scale);
         GetComponent<SpriteRenderer>().sprite = Material;

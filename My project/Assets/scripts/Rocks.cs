@@ -79,7 +79,7 @@ public class Rocks : MonoBehaviour
         MaxHealth += Hardness * 200;
 
         Health = MaxHealth;
-        float Scale = 2 / (5/Size);
+        float Scale = 2 / (5/Size) * 1.5f;
         transform.position = new Vector3(transform.position.x,-3 + Scale/2, transform.position.z);
         transform.localScale = new Vector3(Scale, Scale, Scale);
 
