@@ -27,6 +27,12 @@ public class Enemy : MonoBehaviour
     {
         EnemyRend = this.gameObject.GetComponent<SpriteRenderer>();
         managerVariables = GameObject.Find("Manager").GetComponent<manager>();
+
+        float r = Random.Range(140,255);
+        float g = Random.Range(140,255);
+        float b = Random.Range(140,255);
+
+        GetComponent<SpriteRenderer>().color = new Color32((byte)r,(byte)g,(byte)b,255);
     }
 
     void Update()

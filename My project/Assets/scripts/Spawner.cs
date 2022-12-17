@@ -23,11 +23,13 @@ public class Spawner : MonoBehaviour
         int rnd = Random.Range(0,5);
         if (rnd >= 3)
         {
-            Instantiate(enemy, spawnPointy[rnd].gameObject.transform.position + new Vector3(Random.Range(-2,2), Random.Range(-2, 2), Random.Range(-2, 2)), Quaternion.identity * Quaternion.Euler(0,180,0)).transform.SetParent(GameObject.Find("Enemies").gameObject.transform);
+            Instantiate(enemy, spawnPointy[rnd].gameObject.transform.position + new Vector3(Random.Range(-2,2), Random.Range(-2, 2), Random.Range(-2, 2)), Quaternion.identity * Quaternion.Euler(0,180,0))
+                .transform.SetParent(GameObject.Find("Enemies").gameObject.transform);
         }
         else
         {
-            Instantiate(enemy, spawnPointy[rnd].gameObject.transform.position + new Vector3(Random.Range(-2, 2), Random.Range(-2, 2), Random.Range(-2, 2)), Quaternion.identity).transform.SetParent(GameObject.Find("Enemies").gameObject.transform);
+            Instantiate(enemy, spawnPointy[rnd].gameObject.transform.position + new Vector3(Random.Range(-2, 2), Random.Range(-2, 2), Random.Range(-2, 2)), Quaternion.identity)
+                .transform.SetParent(GameObject.Find("Enemies").gameObject.transform);
 
         }
 
