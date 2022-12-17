@@ -25,7 +25,6 @@ public class bullet : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        print("kolizia");
         if (other.gameObject.name == "Ground")
         {
             Destroy(gameObject);
