@@ -75,8 +75,8 @@ public class manager : MonoBehaviour
                     RaidLength = 0;
                     dayTime = 0;
                     timer.GetComponent<TextMeshPro>().text = dayTime.ToString();
-                    timerBG.GetComponent<SpriteRenderer>().color = Color.green;
-                    GameObject.Find("Main Camera").GetComponent<Camera>().backgroundColor = new Color32(68, 116, 153, 255);
+                    timerBG.GetComponent<SpriteRenderer>().color = new Color32(34, 135, 15, 255);
+                    GameObject.Find("Main Camera").GetComponent<Camera>().backgroundColor = new Color32(51, 51, 51, 255);
 
                 }
             }
@@ -85,8 +85,8 @@ public class manager : MonoBehaviour
                 dayTime++;
                 dayTick = 0;
                 timer.GetComponent<TextMeshPro>().text = dayTime.ToString();
-                timerBG.GetComponent<SpriteRenderer>().color = Color.green;
-                GameObject.Find("Main Camera").GetComponent<Camera>().backgroundColor = new Color32(68, 116, 153, 255);
+                timerBG.GetComponent<SpriteRenderer>().color = new Color32(34,135,15,255);
+                GameObject.Find("Main Camera").GetComponent<Camera>().backgroundColor = new Color32(51, 51, 51, 255);
 
             }
         }
