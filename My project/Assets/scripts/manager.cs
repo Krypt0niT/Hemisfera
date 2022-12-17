@@ -17,6 +17,11 @@ public class manager : MonoBehaviour
     int RaidLength = 0;
     
 
+    public float BulletDamage = 5;
+    public float BulletSpeed = 20;
+    public float fireRate = 0.5f;
+
+
     [SerializeField] GameObject timer;
     [SerializeField] GameObject timerBG;
     public class Player
