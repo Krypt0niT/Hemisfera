@@ -873,9 +873,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f711488806db1a440bdbdb9468ba2d3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerRightKey: 100
+  PlayerLeftKey: 97
+  PlayerUseKey: 101
+  PlayerAttackKey: 323
   PlayerRight: 100
   PlayerLeft: 97
   PlayerUse: 101
+  PlayerAttack: 0
 --- !u!4 &1250146383
 Transform:
   m_ObjectHideFlags: 0
@@ -1747,6 +1752,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   usingWeapons: 0
+  usingArmor: 0
   Beh:
   - {fileID: 21300000, guid: f3b671813118d1d4ebdd831b6c08cfeb, type: 3}
   - {fileID: 21300000, guid: d68c51066ca85524cb9d12873161621a, type: 3}
@@ -1768,7 +1774,7 @@ GameObject:
   - component: {fileID: 2112223663}
   - component: {fileID: 2112223662}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: ArmorHint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1801,7 +1807,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2112223660}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
   m_Name: 
@@ -1884,7 +1890,7 @@ MonoBehaviour:
   _SortingLayerID: 0
   _SortingOrder: 0
   m_hasFontAssetChanged: 0
-  m_renderer: {fileID: 1503736052}
+  m_renderer: {fileID: 2112223663}
   m_maskType: 0
 --- !u!23 &2112223663
 MeshRenderer:
@@ -1938,8 +1944,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2125381605}
   - component: {fileID: 2125381604}
+  - component: {fileID: 2125381606}
   m_Layer: 0
-  m_Name: Square
+  m_Name: ArmorUpgradeStation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2013,3 +2020,16 @@ Transform:
   m_Father: {fileID: 1689682993}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2125381606
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125381603}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 2.46}
+  m_Center: {x: 0, y: 0, z: 0}

@@ -135,7 +135,7 @@ public class Player : MonoBehaviour
         {
             ArmorHint.GetComponent<TextMeshPro>().enabled = true;
 
-            if (Input.GetKeyDown(controls.PlayerUse))
+            if (controls.PlayerUse)
             {
                 if (!usingArmor)
                     usingArmor = true;
