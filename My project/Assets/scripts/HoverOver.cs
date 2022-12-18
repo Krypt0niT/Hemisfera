@@ -508,5 +508,133 @@ public class HoverOver : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
                 }
             }
         }
+        else if (main == "Base")
+        {
+            if (route == "Shield")
+            {
+                if (index == 0)
+                {
+                    transform.GetChild(0).gameObject.SetActive(false);
+                }
+                else
+                {
+                    if (shop.playerShop.shieldBool[index - 1])
+                    {
+                        transform.GetChild(0).gameObject.SetActive(false);
+                    }
+                }
+            }
+            else if (route == "Health")
+            {
+                if (index == 0)
+                {
+                    transform.GetChild(0).gameObject.SetActive(false);
+                }
+                else
+                {
+                    if (shop.playerShop.healthBool[index - 1])
+                    {
+                        transform.GetChild(0).gameObject.SetActive(false);
+                    }
+                }
+            }
+            else if (route == "Repair")
+            {
+                if (index == 0)
+                {
+                    transform.GetChild(0).gameObject.SetActive(false);
+                }
+            }
+        }
+        else if (main == "MainWeapon")
+        {
+            if (route == "Damage")
+            {
+                if (index == 0)
+                {
+                    transform.GetChild(0).gameObject.SetActive(false);
+                }
+                else
+                {
+                    if (shop.playerShop.MainDamageBool[index - 1])
+                    {
+                        transform.GetChild(0).gameObject.SetActive(false);
+                    }
+                }
+            }
+            else if (route == "Speed")
+            {
+                if (index == 0)
+                {
+                    transform.GetChild(0).gameObject.SetActive(false);
+                }
+                else
+                {
+                    if (shop.playerShop.MainSpeedBool[index - 1])
+                    {
+                        transform.GetChild(0).gameObject.SetActive(false);
+                    }
+                }
+            }
+            else if (route == "Accuracy")
+            {
+                if (index == 0)
+                {
+                    transform.GetChild(0).gameObject.SetActive(false);
+                }
+                else
+                {
+                    if (shop.playerShop.MainAccuracyBool[index - 1])
+                    {
+                        transform.GetChild(0).gameObject.SetActive(false);
+                    }
+                }
+            }
+        }
+        else if (main == "SecondaryWeapons")
+        {
+            if (route == "Damage")
+            {
+                if (index == 0)
+                {
+                    transform.GetChild(0).gameObject.SetActive(false);
+                }
+                else
+                {
+                    if (shop.playerShop.MainDamageBool[index - 1])
+                    {
+                        transform.GetChild(0).gameObject.SetActive(false);
+                    }
+                }
+            }
+            else if (route == "Speed")
+            {
+                if (index == 0)
+                {
+                    transform.GetChild(0).gameObject.SetActive(false);
+                }
+                else
+                {
+                    if (shop.playerShop.MainSpeedBool[index - 1])
+                    {
+                        transform.GetChild(0).gameObject.SetActive(false);
+                    }
+                }
+            }
+            else if (route == "Accuracy")
+            {
+                if (index == 0)
+                {
+                    transform.GetChild(0).gameObject.SetActive(false);
+                }
+                else
+                {
+                    if (shop.playerShop.MainAccuracyBool[index - 1])
+                    {
+                        transform.GetChild(0).gameObject.SetActive(false);
+                    }
+                }
+            }
+        }
     }
 }
