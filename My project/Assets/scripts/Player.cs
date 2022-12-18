@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     manager managerVariables;
     GameObject WeaponsHint;
     GameObject ArmorHint;
+    GameObject FurnaceHint;
     SpriteRenderer PlayerRend;
     CameraFollow CF;
 
@@ -44,6 +45,8 @@ public class Player : MonoBehaviour
         PlayerRend = this.gameObject.GetComponent<SpriteRenderer>();
         WeaponsHint = GameObject.Find("WeaponsHint");
         ArmorHint = GameObject.Find("ArmorHint");
+        FurnaceHint = GameObject.Find("FurnaceHint");
+
         CF = GameObject.Find("Main Camera").GetComponent<CameraFollow>();
     }
 
@@ -145,6 +148,12 @@ public class Player : MonoBehaviour
                 shop.SetActive(usingArmor);
             }
         }
+        else if (other.gameObject.name == "Furnace")
+        {
+            FurnaceHint.GetComponent<TextMeshPro>().enabled = true;
+
+           
+        }
         else if (other.gameObject.tag == "Rock")
         {
             if(other.gameObject.GetComponent<Rocks>().Health < other.gameObject.GetComponent<Rocks>().MaxHealth) other.gameObject.GetComponentInChildren<HealthBar>().slider.gameObject.SetActive(true);
@@ -178,7 +187,11 @@ public class Player : MonoBehaviour
             usingArmor = false;
             shop.SetActive(usingArmor);
         }
-        
+        else if (other.gameObject.name == "Furnace")
+        {
+            FurnaceHint.GetComponent<TextMeshPro>().enabled = false;
+        }
+
         else if (other.gameObject.tag == "Rock")
         {
             other.gameObject.GetComponentInChildren<HealthBar>().slider.gameObject.SetActive(false);
