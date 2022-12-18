@@ -14,7 +14,7 @@ public class manager : MonoBehaviour
 
     // Start is called before the first frame update
     public bool raid = false;
-    int dayTime = 50;
+    int dayTime = 0;
     float dayTick = 0;
     float raidSpawner = 0;
     int raidSpawned = 0;
