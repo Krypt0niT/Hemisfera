@@ -8,6 +8,8 @@ public class Controls : MonoBehaviour
     public KeyCode PlayerLeftKey = KeyCode.A;
     public KeyCode PlayerUseKey = KeyCode.E;
     public KeyCode PlayerAttackKey = KeyCode.Mouse0;
+    public KeyCode PlayerRightArrowKey = KeyCode.RightArrow;
+    public KeyCode PlayerLeftArrowKey = KeyCode.LeftArrow;
 
     public bool PlayerRight;
     public bool PlayerLeft;
@@ -15,6 +17,9 @@ public class Controls : MonoBehaviour
     public bool PlayerUse2;
     public float PlayerUseTime = 0f;
     public bool PlayerAttack;
+    public bool PlayerRightArrow;
+    public bool PlayerLeftArrow;
+
     private void Update()
     {
         PlayerAttack = Input.GetKey(PlayerAttackKey);
@@ -22,6 +27,8 @@ public class Controls : MonoBehaviour
         PlayerLeft = Input.GetKey(PlayerLeftKey) && !PlayerAttack;
         PlayerUse2 = Input.GetKey(PlayerUseKey);
         PlayerUseTime += Time.deltaTime;
+        PlayerLeftArrow = Input.GetKey(PlayerLeftArrowKey);
+        PlayerRightArrow = Input.GetKey(PlayerRightArrowKey);
     }
 
     private void FixedUpdate()

@@ -37,7 +37,7 @@ public class manager : MonoBehaviour
         public float speed = 5f;
         public float damage = 10f;
         public float hardness = 0f;
-        public int[] Materials = new int[8] { 0, 0, 0, 0, 0, 0, 0, 0 };
+        public int[] Materials = new int[8] { 10, 0, 10, 0, 0, 0, 0, 0 };
 
     }
     public Player PlayerStats = new Player();
@@ -68,7 +68,7 @@ public class manager : MonoBehaviour
                 rozptyl = 15;
                 zlom = 756.4f;
             }
-            else
+            if (order == 2)
             {
                 BulletDamage = 4;
                 BulletSpeed = 100;
