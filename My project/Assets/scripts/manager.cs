@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class manager : MonoBehaviour
 {
@@ -37,7 +38,7 @@ public class manager : MonoBehaviour
         public float speed = 5f;
         public float damage = 10f;
         public float hardness = 0f;
-        public int[] Materials = new int[8] { 10, 0, 5, 10, 0, 0, 0, 0 };
+        public int[] Materials = new int[8] { 0, 0, 0, 0, 0, 0, 0, 0 };
 
     }
     public Player PlayerStats = new Player();
@@ -112,6 +113,12 @@ public class manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
+        if (BaseHP <= 0)
+        {
+            SceneManager.LoadScene(1);
+        }
         /*print("Coal: " + PlayerStats.Materials[0].ToString() 
             + "   stone: " + PlayerStats.Materials[1].ToString() 
             + "   iron: " + PlayerStats.Materials[2].ToString()
@@ -174,7 +181,6 @@ public class manager : MonoBehaviour
             }
             
         }
-        print(BaseHP);
         
         
 
