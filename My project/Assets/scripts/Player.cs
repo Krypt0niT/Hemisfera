@@ -159,7 +159,7 @@ public class Player : MonoBehaviour
             if(other.gameObject.GetComponent<Rocks>().Health < other.gameObject.GetComponent<Rocks>().MaxHealth) other.gameObject.GetComponentInChildren<HealthBar>().slider.gameObject.SetActive(true);
             if (controls.PlayerAttack)
             {
-                other.gameObject.GetComponent<Rocks>().TakeHit(managerVariables.PlayerStats.damage * Time.deltaTime);
+                if(other.gameObject.GetComponent<Rocks>().Hardness <= managerVariables.PlayerStats.hardness) other.gameObject.GetComponent<Rocks>().TakeHit(managerVariables.PlayerStats.damage * Time.deltaTime);
 
                 if (!drill.isPlaying)
                 {

@@ -280,12 +280,16 @@ public class HoverOver : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
 
                                 for (int j = 0; j < costOn; j++) managerVariables.PlayerStats.Materials[Conv(inp[j].Split(":")[0]) + 1] -= Int32.Parse(inp[j].Split(":")[1]);
 
+                                string[] inpAdd = shop.playerShop.damageDescription[index].Split(" ");
+                                print(managerVariables.PlayerStats.damage);
+                                managerVariables.PlayerStats.damage += Int32.Parse(inpAdd[3]);
+                                print(managerVariables.PlayerStats.damage);
+
                             }
 
 
                         }
-                    }
-                    // do code
+                    }                 
                 }
                 else
                 {
@@ -306,6 +310,337 @@ public class HoverOver : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
                                 transform.GetChild(0).gameObject.SetActive(false);
                                 transform.GetChild(1).gameObject.SetActive(true);
                                 shop.playerShop.damageBool[index] = true;
+
+                                for (int j = 0; j < costOn; j++) managerVariables.PlayerStats.Materials[Conv(inp[j].Split(":")[0]) + 1] -= Int32.Parse(inp[j].Split(":")[1]);
+
+                                string[] inpAdd = shop.playerShop.damageDescription[index].Split(" ");
+                                print(managerVariables.PlayerStats.damage);
+                                managerVariables.PlayerStats.damage += Int32.Parse(inpAdd[3]);
+                                print(managerVariables.PlayerStats.damage);
+                            }
+
+
+                        }
+                    }
+                    // do code
+
+                }
+            }
+            else if (route == "Speed")
+            {
+                string[] inp = shop.playerShop.speedCost[index].Split(",");
+                if (index == 0)
+                {
+                    if (!shop.playerShop.speedBool[0])
+                    {
+                        int costOn = 1;
+                        if (inp[1] != " ") costOn++;
+                        if (inp[2] != " ") costOn++;
+
+                        for (int i = 0; i < costOn; i++)
+                        {
+                            if (managerVariables.PlayerStats.Materials[Conv(inp[i].Split(":")[0]) + 1] < Int32.Parse(inp[i].Split(":")[1]))
+                            {
+
+                            }
+                            else if (i == costOn - 1)
+                            {
+                                transform.GetChild(0).gameObject.SetActive(false);
+                                transform.GetChild(1).gameObject.SetActive(true);
+                                shop.playerShop.speedBool[0] = true;
+
+                                for (int j = 0; j < costOn; j++) managerVariables.PlayerStats.Materials[Conv(inp[j].Split(":")[0]) + 1] -= Int32.Parse(inp[j].Split(":")[1]);
+
+                                string[] inpAdd = shop.playerShop.speedDescription[index].Split(" ");
+                                print(managerVariables.PlayerStats.speed);
+                                managerVariables.PlayerStats.damage += Int32.Parse(inpAdd[3]);
+                                print(managerVariables.PlayerStats.speed);
+                            }
+                        }
+                    }
+                    // do code
+
+                }
+                else
+                {
+                    if (shop.playerShop.speedBool[index - 1] && !shop.playerShop.speedBool[index])
+                    {
+                        int costOn = 1;
+                        if (inp[1] != " ") costOn++;
+                        if (inp[2] != " ") costOn++;
+
+                        for (int i = 0; i < costOn; i++)
+                        {
+                            if (managerVariables.PlayerStats.Materials[Conv(inp[i].Split(":")[0]) + 1] < Int32.Parse(inp[i].Split(":")[1]))
+                            {
+
+                            }
+                            else if (i == costOn - 1)
+                            {
+                                transform.GetChild(0).gameObject.SetActive(false);
+                                transform.GetChild(1).gameObject.SetActive(true);
+                                shop.playerShop.speedBool[index] = true;
+
+                                for (int j = 0; j < costOn; j++) managerVariables.PlayerStats.Materials[Conv(inp[j].Split(":")[0]) + 1] -= Int32.Parse(inp[j].Split(":")[1]);
+
+                                string[] inpAdd = shop.playerShop.speedDescription[index].Split(" ");
+                                print(managerVariables.PlayerStats.speed);
+                                managerVariables.PlayerStats.damage += Int32.Parse(inpAdd[3]);
+                                print(managerVariables.PlayerStats.speed);
+                            }
+                        }
+                    }
+                    // do code
+
+                }
+            }
+            else if (route == "Hardness")
+            {
+                string[] inp = shop.playerShop.hardnessCost[index].Split(",");
+                if (index == 0)
+                {
+                    if (!shop.playerShop.hardnessBool[0])
+                    {
+                        int costOn = 1;
+                        if (inp[1] != " ") costOn++;
+                        if (inp[2] != " ") costOn++;
+
+                        for (int i = 0; i < costOn; i++)
+                        {
+                            if (managerVariables.PlayerStats.Materials[Conv(inp[i].Split(":")[0]) + 1] < Int32.Parse(inp[i].Split(":")[1]))
+                            {
+
+                            }
+                            else if (i == costOn - 1)
+                            {
+                                transform.GetChild(0).gameObject.SetActive(false);
+                                transform.GetChild(1).gameObject.SetActive(true);
+                                shop.playerShop.hardnessBool[0] = true;
+
+                                for (int j = 0; j < costOn; j++) managerVariables.PlayerStats.Materials[Conv(inp[j].Split(":")[0]) + 1] -= Int32.Parse(inp[j].Split(":")[1]);
+
+                            }
+
+
+                        }
+                    }
+                    // do code
+
+                }
+                else
+                {
+                    if (shop.playerShop.hardnessBool[index - 1] && !shop.playerShop.hardnessBool[index])
+                    {
+                        int costOn = 1;
+                        if (inp[1] != " ") costOn++;
+                        if (inp[2] != " ") costOn++;
+
+                        for (int i = 0; i < costOn; i++)
+                        {
+                            if (managerVariables.PlayerStats.Materials[Conv(inp[i].Split(":")[0]) + 1] < Int32.Parse(inp[i].Split(":")[1]))
+                            {
+
+                            }
+                            else if (i == costOn - 1)
+                            {
+                                transform.GetChild(0).gameObject.SetActive(false);
+                                transform.GetChild(1).gameObject.SetActive(true);
+                                shop.playerShop.hardnessBool[index] = true;
+
+                                for (int j = 0; j < costOn; j++) managerVariables.PlayerStats.Materials[Conv(inp[j].Split(":")[0]) + 1] -= Int32.Parse(inp[j].Split(":")[1]);
+
+                            }
+
+                            print(managerVariables.PlayerStats.hardness);
+                            managerVariables.PlayerStats.hardness ++;
+                            print(managerVariables.PlayerStats.hardness);
+                        }
+                    }
+                }
+            }
+        }
+        else if (main == "Base")
+        {
+            if (route == "Damage")
+            {
+                string[] inp = shop.playerShop.damageCost[index].Split(",");
+                if (index == 0)
+                {
+                    if (!shop.playerShop.damageBool[0])
+                    {
+                        int costOn = 1;
+                        if (inp[1] != " ") costOn++;
+                        if (inp[2] != " ") costOn++;
+
+                        for (int i = 0; i < costOn; i++)
+                        {
+                            if (managerVariables.PlayerStats.Materials[Conv(inp[i].Split(":")[0]) + 1] < Int32.Parse(inp[i].Split(":")[1]))
+                            {
+
+                            }
+                            else if (i == costOn - 1)
+                            {
+                                transform.GetChild(0).gameObject.SetActive(false);
+                                transform.GetChild(1).gameObject.SetActive(true);
+                                shop.playerShop.damageBool[0] = true;
+
+                                for (int j = 0; j < costOn; j++) managerVariables.PlayerStats.Materials[Conv(inp[j].Split(":")[0]) + 1] -= Int32.Parse(inp[j].Split(":")[1]);
+
+                            }
+
+
+                        }
+                    }
+                    // do code
+
+                }
+                else
+                {
+                    if (shop.playerShop.damageBool[index - 1] && !shop.playerShop.damageBool[index])
+                    {
+                        int costOn = 1;
+                        if (inp[1] != " ") costOn++;
+                        if (inp[2] != " ") costOn++;
+
+                        for (int i = 0; i < costOn; i++)
+                        {
+                            if (managerVariables.PlayerStats.Materials[Conv(inp[i].Split(":")[0]) + 1] < Int32.Parse(inp[i].Split(":")[1]))
+                            {
+
+                            }
+                            else if (i == costOn - 1)
+                            {
+                                transform.GetChild(0).gameObject.SetActive(false);
+                                transform.GetChild(1).gameObject.SetActive(true);
+                                shop.playerShop.damageBool[index] = true;
+
+                                for (int j = 0; j < costOn; j++) managerVariables.PlayerStats.Materials[Conv(inp[j].Split(":")[0]) + 1] -= Int32.Parse(inp[j].Split(":")[1]);
+
+                            }
+
+
+                        }
+                    }
+                    // do code
+
+                }
+            }
+            else if (route == "Speed")
+            {
+                string[] inp = shop.playerShop.speedCost[index].Split(",");
+                if (index == 0)
+                {
+                    if (!shop.playerShop.speedBool[0])
+                    {
+                        int costOn = 1;
+                        if (inp[1] != " ") costOn++;
+                        if (inp[2] != " ") costOn++;
+
+                        for (int i = 0; i < costOn; i++)
+                        {
+                            if (managerVariables.PlayerStats.Materials[Conv(inp[i].Split(":")[0]) + 1] < Int32.Parse(inp[i].Split(":")[1]))
+                            {
+
+                            }
+                            else if (i == costOn - 1)
+                            {
+                                transform.GetChild(0).gameObject.SetActive(false);
+                                transform.GetChild(1).gameObject.SetActive(true);
+                                shop.playerShop.speedBool[0] = true;
+
+                                for (int j = 0; j < costOn; j++) managerVariables.PlayerStats.Materials[Conv(inp[j].Split(":")[0]) + 1] -= Int32.Parse(inp[j].Split(":")[1]);
+
+                            }
+
+
+                        }
+                    }
+                    // do code
+
+                }
+                else
+                {
+                    if (shop.playerShop.speedBool[index - 1] && !shop.playerShop.speedBool[index])
+                    {
+                        int costOn = 1;
+                        if (inp[1] != " ") costOn++;
+                        if (inp[2] != " ") costOn++;
+
+                        for (int i = 0; i < costOn; i++)
+                        {
+                            if (managerVariables.PlayerStats.Materials[Conv(inp[i].Split(":")[0]) + 1] < Int32.Parse(inp[i].Split(":")[1]))
+                            {
+
+                            }
+                            else if (i == costOn - 1)
+                            {
+                                transform.GetChild(0).gameObject.SetActive(false);
+                                transform.GetChild(1).gameObject.SetActive(true);
+                                shop.playerShop.speedBool[index] = true;
+
+                                for (int j = 0; j < costOn; j++) managerVariables.PlayerStats.Materials[Conv(inp[j].Split(":")[0]) + 1] -= Int32.Parse(inp[j].Split(":")[1]);
+
+                            }
+
+
+                        }
+                    }
+                    // do code
+
+                }
+            }
+            else if (route == "Hardness")
+            {
+                string[] inp = shop.playerShop.hardnessCost[index].Split(",");
+                if (index == 0)
+                {
+                    if (!shop.playerShop.hardnessBool[0])
+                    {
+                        int costOn = 1;
+                        if (inp[1] != " ") costOn++;
+                        if (inp[2] != " ") costOn++;
+
+                        for (int i = 0; i < costOn; i++)
+                        {
+                            if (managerVariables.PlayerStats.Materials[Conv(inp[i].Split(":")[0]) + 1] < Int32.Parse(inp[i].Split(":")[1]))
+                            {
+
+                            }
+                            else if (i == costOn - 1)
+                            {
+                                transform.GetChild(0).gameObject.SetActive(false);
+                                transform.GetChild(1).gameObject.SetActive(true);
+                                shop.playerShop.hardnessBool[0] = true;
+
+                                for (int j = 0; j < costOn; j++) managerVariables.PlayerStats.Materials[Conv(inp[j].Split(":")[0]) + 1] -= Int32.Parse(inp[j].Split(":")[1]);
+
+                            }
+
+
+                        }
+                    }
+                    // do code
+
+                }
+                else
+                {
+                    if (shop.playerShop.hardnessBool[index - 1] && !shop.playerShop.hardnessBool[index])
+                    {
+                        int costOn = 1;
+                        if (inp[1] != " ") costOn++;
+                        if (inp[2] != " ") costOn++;
+
+                        for (int i = 0; i < costOn; i++)
+                        {
+                            if (managerVariables.PlayerStats.Materials[Conv(inp[i].Split(":")[0]) + 1] < Int32.Parse(inp[i].Split(":")[1]))
+                            {
+
+                            }
+                            else if (i == costOn - 1)
+                            {
+                                transform.GetChild(0).gameObject.SetActive(false);
+                                transform.GetChild(1).gameObject.SetActive(true);
+                                shop.playerShop.hardnessBool[index] = true;
 
                                 for (int j = 0; j < costOn; j++) managerVariables.PlayerStats.Materials[Conv(inp[j].Split(":")[0]) + 1] -= Int32.Parse(inp[j].Split(":")[1]);
 
