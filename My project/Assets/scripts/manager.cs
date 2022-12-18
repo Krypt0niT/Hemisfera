@@ -39,7 +39,7 @@ public class manager : MonoBehaviour
         public float speed = 5f;
         public float damage = 10f;
         public float hardness = 0f;
-        public int[] Materials = new int[8] { 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000 };
+        public int[] Materials = new int[8] { 0, 0, 0, 0, 0, 0, 0, 0 };
     }
     public Player PlayerStats = new Player();
 
