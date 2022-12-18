@@ -174,6 +174,7 @@ public class manager : MonoBehaviour
             }
             
         }
+        print(BaseHP);
         
         
 

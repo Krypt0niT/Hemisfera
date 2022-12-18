@@ -27,7 +27,6 @@ public class weapons : MonoBehaviour
         managerVariables = GameObject.Find("Manager").GetComponent<manager>();
         split = this.gameObject.name.Split('-');
         order = Int32.Parse(split[1]);
-        print(order);
         if (order == 0)
             thisWeapon = managerVariables.Weapon0;
         else if (order == 1)
@@ -35,7 +34,6 @@ public class weapons : MonoBehaviour
         else
             thisWeapon = managerVariables.Weapon2;
 
-        print(order);
     }
 
     // Update is called once per frame

@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Drawing;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UI : MonoBehaviour
 {
+
+    [SerializeField] GameObject baseHealthSlider;
     [SerializeField] List<TextMeshProUGUI> hodnoty;
     manager managerVariables;
     void Start()
@@ -19,5 +22,6 @@ public class UI : MonoBehaviour
         {
             hodnoty[i].text = managerVariables.PlayerStats.Materials[i].ToString();
         }
+        baseHealthSlider.GetComponent<Slider>().value = managerVariables.BaseHP;
     }
 }

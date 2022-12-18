@@ -36,6 +36,7 @@ public class Enemy : MonoBehaviour
         float rnd = Random.Range(0.5f, managerVariables.RaidStrengh);
         transform.localScale = new Vector3(rnd, rnd,transform.localScale.z);
         health = Random.Range(1, managerVariables.RaidStrengh) *10;
+        damage = managerVariables.RaidStrengh;
     }
 
     void Update()
@@ -107,7 +108,7 @@ public class Enemy : MonoBehaviour
                 }
                 if (attackIndex == 3)
                 {
-                    managerVariables.BaseHP--;
+                    managerVariables.BaseHP-= damage;
                 }
 
             }
