@@ -17,7 +17,7 @@ public class furnace : MonoBehaviour
     float cookTick = 0;
 
     int oreCapacity = 10;
-    int coalCapacity = 20;
+    int coalCapacity = 10;
     int oreInstantCapacity = 0;
     int coalInstantCapacity = 0;
     string oreSelected = "Gold";
@@ -86,9 +86,15 @@ public class furnace : MonoBehaviour
                     {
                         if (managerVariables.PlayerStats.Materials[2] >= 10)
                         {
-                            managerVariables.PlayerStats.Materials[2] -= 10;
-                            oreInstantCapacity += 10;
-                            on = true;
+                            if (managerVariables.PlayerStats.Materials[0] >= 10)
+                            {
+                                managerVariables.PlayerStats.Materials[2] -= 10;
+                                managerVariables.PlayerStats.Materials[0] -= 10;
+
+                                oreInstantCapacity += 10;
+                                on = true;
+                            }
+                            
 
                         }
                         else
@@ -104,9 +110,15 @@ public class furnace : MonoBehaviour
                     {
                         if (managerVariables.PlayerStats.Materials[3] >= 10)
                         {
-                            managerVariables.PlayerStats.Materials[3] -= 10;
-                            oreInstantCapacity += 10;
-                            on = true;
+                            if (managerVariables.PlayerStats.Materials[0] >= 10)
+                            {
+                                managerVariables.PlayerStats.Materials[3] -= 10;
+                                managerVariables.PlayerStats.Materials[0] -= 10;
+
+                                oreInstantCapacity += 10;
+                                on = true;
+                            }
+                                
 
                         }
                         else
@@ -131,11 +143,14 @@ public class furnace : MonoBehaviour
                 {
                     managerVariables.PlayerStats.Materials[6] += oreInstantCapacity;
                     oreInstantCapacity = 0;
+                    navybratie = false;
                 }
                 if (oreSelected == "Gold")
                 {
                     managerVariables.PlayerStats.Materials[7] += oreInstantCapacity;
                     oreInstantCapacity = 0;
+                    navybratie = false;
+
                 }
             }
         }

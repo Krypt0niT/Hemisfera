@@ -25,7 +25,7 @@ public class HoverOver : MonoBehaviour, IPointerEnterHandler
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if(main == "Player")
+       /* if(main == "Player")
         {
             if(route == "Damage")
             {
@@ -210,7 +210,7 @@ public class HoverOver : MonoBehaviour, IPointerEnterHandler
                     shop.Cost2.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = inp2[1];
                 }
             }
-        }
+        }*/
 
 
 

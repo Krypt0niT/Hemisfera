@@ -1,59 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
     manager managerVariables;
-    public TextMeshProUGUI Name;
-    public TextMeshProUGUI Description;
-    public GameObject Cost0;
-    public GameObject Cost1;
-    public GameObject Cost2;
-
     public class PlayerShop
     {
-        //===== PLAYER =====//
+        //=== start ===//
+        public bool startBool = true;
 
         //=== damage ===//
         public bool[] damageBool = new bool[5] { false, false, false, false, false };
         public string[] damageName = new string[5] {"Damage I", "Damage II", "Damage III", "Damage IV", "Damage V"};
         public string[] damageDescription = new string[5] { "Drill damage + 10", "Drill damage + 40", "Drill damage + 120", "Drill damage + 300", "Drill damage + 800" };
-        public string[] damageCost = new string[5] { "0:5, , ", "0:10,1:6, ", "2:10,3:5, ", "2:15,4:10,5:6", "4:20,5:10,6:3" };
+        public string[] damageCost = new string[5] { "Stone:5, , ", "Stone:10,RawIron:6, ", "Iron:10,RawGold:5, ", "Iron:15,Gold:10,Diamond:6", "Gold:20,Diamond:10,Chunkerium:3" };
 
         //=== speed ===//
         public bool[] speedBool = new bool[5] { false, false, false, false, false };
         public string[] speedName = new string[5] { "Speed I", "Speed II", "Speed III", "Speed IV", "Speed V" };
         public string[] speedDescription = new string[5] { "Player speed + 3", "Player speed + 5", "Player speed + 8", "Player speed + 12", "Player speed + 16" };
-        public string[] speedCost = new string[5] { "0:5, , ", "0:10,1:6, ", "2:10,3:5, ", "2:15,4:10,5:6", "4:20,5:10,6:3" };
+        public string[] speedCost = new string[5] { "Stone:5, , ", "Stone:10,RawIron:6, ", "Iron:10,RawGold:5, ", "Iron:15,Gold:10,Diamond:6", "Gold:20,Diamond:10,Chunkerium:3" };
 
         //=== hardness ===//
         public bool[] hardnessBool = new bool[4] { false, false, false, false};
-        public string[] hardnessName = new string[4] { "Drill I", "Drill II", "Drill III", "Drill IV" };
-        public string[] hardnessDescription = new string[4] { "Unlocks the ability to mine Iron", "Unlocks the ability to mine Gold", "Unlocks the ability to mine Diamond", "Unlocks the ability to mine Chunkerium" };
-        public string[] hardnessCost = new string[4] { "0:10, , ", "0:20,2:6, ", "0:20,2:10,4:5", "2:20,4:15,5:5"};
-
-        //===== BASE =====//
-
-        //=== shield ===//
-        public bool[] shieldBool = new bool[5] { false, false, false, false, false };
-        public string[] shieldName = new string[5] { "Damage I", "Damage II", "Damage III", "Damage IV", "Damage V" };
-        public string[] shieldDescription = new string[5] { "Drill damage + 10", "Drill damage + 40", "Drill damage + 120", "Drill damage + 300", "Drill damage + 800" };
-        public string[] shieldCost = new string[5] { "0:5, , ", "0:10,1:6, ", "2:10,3:5, ", "2:15,4:10,5:6", "4:20,5:10,6:3" };
-
-        //=== health ===//
-        public bool[] healthBool = new bool[5] { false, false, false, false, false };
-        public string[] healthName = new string[5] { "Speed I", "Speed II", "Speed III", "Speed IV", "Speed V" };
-        public string[] healthDescription = new string[5] { "Player speed + 3", "Player speed + 5", "Player speed + 8", "Player speed + 12", "Player speed + 16" };
-        public string[] healthCost = new string[5] { "0:5, , ", "0:10,1:6, ", "2:10,3:5, ", "2:15,4:10,5:6", "4:20,5:10,6:3" };
-
-        //=== repair ===//
-        public int[] RepairCost = new int[] {2, 1};
-        public string[] repairName = new string[4] { "Drill I", "Drill II", "Drill III", "Drill IV" };
-        public string[] repairDescription = new string[4] { "Unlocks the ability to mine Iron", "Unlocks the ability to mine Gold", "Unlocks the ability to mine Diamond", "Unlocks the ability to mine Chunkerium" };
-        public string[] repairCost = new string[1] { "0:10, , "};
+        public string[] hardnessName = new string[4] { "Damage I", "Damage II", "Damage III", "Damage IV"};
+        public string[] hardnessDescription = new string[4] { "Drill damage + 10", "Drill damage + 40", "Drill damage + 120", "Drill damage + 300"};
+        public string[] hardnessCost = new string[4] { "Stone:5, , ", "Stone:10,RawIron:6, ", "Iron:10,RawGold:5, ", "Iron:15,Gold:10,Diamond:6"};
 
     }
     public PlayerShop playerShop = new PlayerShop();
@@ -61,12 +35,6 @@ public class Shop : MonoBehaviour
     void Start()
     {
         managerVariables = GameObject.Find("Manager").GetComponent<manager>();
-
-
-
-
-
-
     }
 
     
