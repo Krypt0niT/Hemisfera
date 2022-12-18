@@ -37,7 +37,7 @@ public class manager : MonoBehaviour
         public float speed = 5f;
         public float damage = 10f;
         public float hardness = 0f;
-        public int[] Materials = new int[8] { 20, 0, 10, 10, 0, 0, 0, 0 };
+        public int[] Materials = new int[8] { 10, 0, 5, 10, 0, 0, 0, 0 };
 
     }
     public Player PlayerStats = new Player();
@@ -126,7 +126,7 @@ public class manager : MonoBehaviour
             if (dayTime == 60)
             {
                 timerBG.GetComponent<SpriteRenderer>().color = new Color32(200,20,20,255);
-                GameObject.Find("Main Camera").GetComponent<Camera>().backgroundColor = new Color32(63, 40, 41, 255);
+                GameObject.Find("bg").GetComponent<SpriteRenderer>().color = new Color32(70, 44, 44, 255);
                 raid = true;
                 dayTick = 0;
                 if (firsttime)
@@ -144,7 +144,7 @@ public class manager : MonoBehaviour
                     RaidStrengh += 0.1f;
                     timer.GetComponent<TextMeshPro>().text = dayTime.ToString();
                     timerBG.GetComponent<SpriteRenderer>().color = new Color32(36, 31, 31, 255);
-                    GameObject.Find("Main Camera").GetComponent<Camera>().backgroundColor = new Color32(51, 51, 51, 255);
+                    GameObject.Find("bg").GetComponent<SpriteRenderer>().color = new Color32(63, 62, 62, 255);
 
                 }
             }
@@ -155,7 +155,7 @@ public class manager : MonoBehaviour
                 dayTick = 0;
                 timer.GetComponent<TextMeshPro>().text = dayTime.ToString();
                 timerBG.GetComponent<SpriteRenderer>().color = new Color32(36, 31, 31, 255);
-                GameObject.Find("Main Camera").GetComponent<Camera>().backgroundColor = new Color32(51, 51, 51, 255);
+                GameObject.Find("bg").GetComponent<SpriteRenderer>().color = new Color32(63, 62, 62, 255);
 
             }
         }
