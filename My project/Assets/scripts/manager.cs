@@ -117,7 +117,7 @@ public class manager : MonoBehaviour
 
         if (BaseHP <= 0)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
         }
         /*print("Coal: " + PlayerStats.Materials[0].ToString() 
             + "   stone: " + PlayerStats.Materials[1].ToString() 
