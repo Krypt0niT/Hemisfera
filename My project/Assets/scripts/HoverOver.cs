@@ -5,8 +5,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.Windows;
 
-public class HoverOver : MonoBehaviour, IPointerEnterHandler
+public class HoverOver : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
 {
     public Shop shop;
     public string main;
@@ -14,20 +15,20 @@ public class HoverOver : MonoBehaviour, IPointerEnterHandler
     public int index;
 
     public Sprite[] Materials;
-
+    manager managerVariables;
 
     private void Start()
     {
-        
+        managerVariables = GameObject.Find("Manager").GetComponent<manager>();
     }
 
 
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-       /* if(main == "Player")
+        if (main == "Player")
         {
-            if(route == "Damage")
+            if (route == "Damage")
             {
                 shop.Name.text = shop.playerShop.damageName[index];
                 shop.Description.text = shop.playerShop.damageDescription[index];
@@ -57,7 +58,7 @@ public class HoverOver : MonoBehaviour, IPointerEnterHandler
                     shop.Cost2.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = inp2[1];
                 }
             }
-            else if(route == "Speed")
+            else if (route == "Speed")
             {
                 shop.Name.text = shop.playerShop.speedName[index];
                 shop.Description.text = shop.playerShop.speedDescription[index];
@@ -210,9 +211,134 @@ public class HoverOver : MonoBehaviour, IPointerEnterHandler
                     shop.Cost2.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = inp2[1];
                 }
             }
-        }*/
+        }
 
 
 
+    }
+
+    int Conv(string inpt)
+    {
+        if(inpt == "0")
+        {
+            return 0;
+        }
+        if (inpt == "1")
+        {
+            return 1;
+        }
+        if (inpt == "2")
+        {
+            return 5;
+        }
+        if (inpt == "3")
+        {
+            return 2;
+        }
+        if (inpt == "4")
+        {
+            return 6;
+        }
+        if (inpt == "5")
+        {
+            return 3;
+        }
+        if (inpt == "6")
+        {
+            return 4;
+        }
+
+        return 0;
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (main == "Player")
+        {
+            if (route == "Damage")
+            {
+                string[] inp = shop.playerShop.damageCost[index].Split(",");
+                if (index == 0)
+                {
+                    if (!shop.playerShop.damageBool[0])
+                    {
+                        int costOn = 1;
+                        if (inp[1] != " ") costOn++;
+                        if (inp[2] != " ") costOn++;
+
+                        for (int i = 0; i < costOn; i++)
+                        {
+                            if (managerVariables.PlayerStats.Materials[Conv(inp[i].Split(":")[0]) + 1] < Int32.Parse(inp[i].Split(":")[1]))
+                            {
+
+                            }
+                            else if (i == costOn - 1)
+                            {
+                                transform.GetChild(0).gameObject.SetActive(false);
+                                transform.GetChild(1).gameObject.SetActive(true);
+                                shop.playerShop.damageBool[0] = true;
+
+                                for (int j = 0; j < costOn; j++) managerVariables.PlayerStats.Materials[Conv(inp[j].Split(":")[0]) + 1] -= Int32.Parse(inp[j].Split(":")[1]);
+
+                            }
+
+
+                        }
+                    }
+                    // do code
+                }
+                else
+                {
+                    if (shop.playerShop.damageBool[index-1] && !shop.playerShop.damageBool[index])
+                    {
+                        int costOn = 1;
+                        if (inp[1] != " ") costOn++;
+                        if (inp[2] != " ") costOn++;
+
+                        for (int i = 0; i < costOn; i++)
+                        {
+                            if (managerVariables.PlayerStats.Materials[Conv(inp[i].Split(":")[0]) + 1] < Int32.Parse(inp[i].Split(":")[1]))
+                            {
+
+                            }
+                            else if (i == costOn - 1)
+                            {
+                                transform.GetChild(0).gameObject.SetActive(false);
+                                transform.GetChild(1).gameObject.SetActive(true);
+                                shop.playerShop.damageBool[index] = true;
+
+                                for (int j = 0; j < costOn; j++) managerVariables.PlayerStats.Materials[Conv(inp[j].Split(":")[0]) + 1] -= Int32.Parse(inp[j].Split(":")[1]);
+
+                            }
+
+
+                        }
+                    }
+                    // do code
+
+                }
+            }
+        }
+    }
+
+    private void Update()
+    {
+        if (main == "Player")
+        {
+            if (route == "Damage")
+            {
+                if (index == 0)
+                {
+                    transform.GetChild(0).gameObject.SetActive(false);
+                }
+                else
+                {
+                    if (shop.playerShop.damageBool[index - 1])
+                    {
+                        transform.GetChild(0).gameObject.SetActive(false);
+                    }
+                }
+            }
+        }
     }
 }
