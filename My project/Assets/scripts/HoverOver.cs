@@ -353,7 +353,7 @@ public class HoverOver : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
 
                                 string[] inpAdd = shop.playerShop.speedDescription[index].Split(" ");
                                 print(managerVariables.PlayerStats.speed);
-                                managerVariables.PlayerStats.damage += Int32.Parse(inpAdd[3]);
+                                managerVariables.PlayerStats.speed += Int32.Parse(inpAdd[3]);
                                 print(managerVariables.PlayerStats.speed);
                             }
                         }
@@ -385,7 +385,7 @@ public class HoverOver : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
 
                                 string[] inpAdd = shop.playerShop.speedDescription[index].Split(" ");
                                 print(managerVariables.PlayerStats.speed);
-                                managerVariables.PlayerStats.damage += Int32.Parse(inpAdd[3]);
+                                managerVariables.PlayerStats.speed += Int32.Parse(inpAdd[3]);
                                 print(managerVariables.PlayerStats.speed);
                             }
                         }
@@ -419,9 +419,10 @@ public class HoverOver : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
 
                                 for (int j = 0; j < costOn; j++) managerVariables.PlayerStats.Materials[Conv(inp[j].Split(":")[0]) + 1] -= Int32.Parse(inp[j].Split(":")[1]);
 
+                                print(managerVariables.PlayerStats.hardness);
+                                managerVariables.PlayerStats.hardness++;
+                                print(managerVariables.PlayerStats.hardness);
                             }
-
-
                         }
                     }
                     // do code
@@ -449,11 +450,10 @@ public class HoverOver : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
 
                                 for (int j = 0; j < costOn; j++) managerVariables.PlayerStats.Materials[Conv(inp[j].Split(":")[0]) + 1] -= Int32.Parse(inp[j].Split(":")[1]);
 
+                                print(managerVariables.PlayerStats.hardness);
+                                managerVariables.PlayerStats.hardness++;
+                                print(managerVariables.PlayerStats.hardness);
                             }
-
-                            print(managerVariables.PlayerStats.hardness);
-                            managerVariables.PlayerStats.hardness ++;
-                            print(managerVariables.PlayerStats.hardness);
                         }
                     }
                 }
