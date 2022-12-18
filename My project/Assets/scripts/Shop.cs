@@ -66,7 +66,7 @@ public class Shop : MonoBehaviour
         //=== Speed ===//
         public bool[] MainSpeedBool = new bool[5] { false, false, false, false, false };
         public string[] MainSpeedName = new string[5] { "Speed I", "Speed II", "Speed III", "Speed IV", "Speed V" };
-        public string[] MainSpeedDescription = new string[5] { "Weapon speed + 0.5 bullet per second", "Weapon speed + 1.0 bullet per second", "Weapon speed + 1.6 bullet per second", "Weapon speed + 2.5 bullet per second", "Weapon speed + 3.2 bullet per second" };
+        public string[] MainSpeedDescription = new string[5] { "Weapon speed + 1 bullet per second", "Weapon speed + 1 bullet per second", "Weapon speed + 2 bullet per second", "Weapon speed + 2 bullet per second", "Weapon speed + 3 bullet per second" };
         public string[] MainSpeedCost = new string[5] { "1:10,3:5, ", "2:10,3:10, ", "4:10,5:5, ", "4:10,5:10,6:3", "5:15,6:10, " };
 
         //=== Accuracy ===//
@@ -83,13 +83,13 @@ public class Shop : MonoBehaviour
         public bool[] SecondaryDamageBool = new bool[5] { false, false, false, false, false };
         public string[] SecondaryDamageName = new string[5] { "Damage I", "Damage II", "Damage III", "Damage IV", "Damage V" };
         public string[] SecondaryDamageDescription = new string[5] { "Weapon damage + 2", "Weapon damage + 3", "DWeapon damage + 7", "Weapon damage + 12", "Weapon damage + 20" };
-        public string[] SecondaryDamageCost = new string[5] { "1:10,3:5 , ", "4:6,5:2, ", "4:10,5:5, ", "5:5,6:2,", "5:10,6:6," };
+        public string[] SecondaryDamageCost = new string[5] { "1:10,3:5, ", "4:6,5:2, ", "4:10,5:5, ", "5:5,6:2, ", "5:10,6:6, " };
 
         //=== Speed ===//
         public bool[] SecondarySpeedBool = new bool[5] { false, false, false, false, false };
         public string[] SecondarySpeedName = new string[5] { "Speed I", "Speed II", "Speed III", "Speed IV", "Speed V" };
-        public string[] SecondarySpeedDescription = new string[5] { "Weapon speed + 1.0 bullet per second", "Weapon speed + 1.8 bullet per second", "Weapon speed + 2.6 bullet per second", "Weapon speed + 3.8 bullet per second", "Weapon speed + 6.0 bullet per second" };
-        public string[] SecondarySpeedCost = new string[5] { "1:15, 3:8, ", "2:10, 3:10, ", "4:8,5:3, ", "4:15,5:8,6:2", "5:15,6:8," };
+        public string[] SecondarySpeedDescription = new string[5] { "Weapon speed + 1 bullet per second", "Weapon speed + 2 bullet per second", "Weapon speed + 2 bullet per second", "Weapon speed + 4 bullet per second", "Weapon speed + 6 bullet per second" };
+        public string[] SecondarySpeedCost = new string[5] { "1:15, 3:8, ", "2:10, 3:10, ", "4:8,5:3, ", "4:15,5:8,6:2", "5:15,6:8, " };
 
     }
     public PlayerShop playerShop = new PlayerShop();

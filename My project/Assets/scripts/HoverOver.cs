@@ -914,6 +914,141 @@ public class HoverOver : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
                 }
             }
         }
+        else if (main == "SecondaryWeapons")
+        {
+            if (route == "Damage")
+            {
+                string[] inp = shop.playerShop.SecondaryDamageCost[index].Split(",");
+                if (index == 0)
+                {
+                    if (!shop.playerShop.SecondaryDamageBool[0])
+                    {
+                        int costOn = 1;
+                        if (inp[1] != " ") costOn++;
+                        if (inp[2] != " ") costOn++;
+
+                        for (int i = 0; i < costOn; i++)
+                        {
+                            if (managerVariables.PlayerStats.Materials[Conv(inp[i].Split(":")[0]) + 1] < Int32.Parse(inp[i].Split(":")[1]))
+                            {
+
+                            }
+                            else if (i == costOn - 1)
+                            {
+                                transform.GetChild(0).gameObject.SetActive(false);
+                                transform.GetChild(1).gameObject.SetActive(true);
+                                shop.playerShop.SecondaryDamageBool[0] = true;
+
+                                for (int j = 0; j < costOn; j++) managerVariables.PlayerStats.Materials[Conv(inp[j].Split(":")[0]) + 1] -= Int32.Parse(inp[j].Split(":")[1]);
+
+                                string[] inpAdd = shop.playerShop.MainDamageDescription[index].Split(" ");
+                                managerVariables.Weapon1.BulletDamage += Int32.Parse(inpAdd[3]);
+                                managerVariables.Weapon2.BulletDamage += Int32.Parse(inpAdd[3]);
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    if (shop.playerShop.SecondaryDamageBool[index - 1] && !shop.playerShop.SecondaryDamageBool[index])
+                    {
+                        int costOn = 1;
+                        if (inp[1] != " ") costOn++;
+                        if (inp[2] != " ") costOn++;
+
+                        for (int i = 0; i < costOn; i++)
+                        {
+                            if (managerVariables.PlayerStats.Materials[Conv(inp[i].Split(":")[0]) + 1] < Int32.Parse(inp[i].Split(":")[1]))
+                            {
+
+                            }
+                            else if (i == costOn - 1)
+                            {
+                                transform.GetChild(0).gameObject.SetActive(false);
+                                transform.GetChild(1).gameObject.SetActive(true);
+                                shop.playerShop.SecondaryDamageBool[index] = true;
+
+                                for (int j = 0; j < costOn; j++) managerVariables.PlayerStats.Materials[Conv(inp[j].Split(":")[0]) + 1] -= Int32.Parse(inp[j].Split(":")[1]);
+
+                                string[] inpAdd = shop.playerShop.SecondaryDamageDescription[index].Split(" ");
+                                managerVariables.Weapon1.BulletDamage += Int32.Parse(inpAdd[3]);
+                                managerVariables.Weapon2.BulletDamage += Int32.Parse(inpAdd[3]);
+                            }
+
+
+                        }
+                    }
+                    // do code
+
+                }
+            }
+            else if (route == "Speed")
+            {
+                string[] inp = shop.playerShop.SecondarySpeedCost[index].Split(",");
+                if (index == 0)
+                {
+                    if (!shop.playerShop.SecondarySpeedBool[0])
+                    {
+                        int costOn = 1;
+                        if (inp[1] != " ") costOn++;
+                        if (inp[2] != " ") costOn++;
+
+                        for (int i = 0; i < costOn; i++)
+                        {
+                            if (managerVariables.PlayerStats.Materials[Conv(inp[i].Split(":")[0]) + 1] < Int32.Parse(inp[i].Split(":")[1]))
+                            {
+
+                            }
+                            else if (i == costOn - 1)
+                            {
+                                transform.GetChild(0).gameObject.SetActive(false);
+                                transform.GetChild(1).gameObject.SetActive(true);
+                                shop.playerShop.SecondarySpeedBool[0] = true;
+
+                                for (int j = 0; j < costOn; j++) managerVariables.PlayerStats.Materials[Conv(inp[j].Split(":")[0]) + 1] -= Int32.Parse(inp[j].Split(":")[1]);
+
+                                string[] inpAdd = shop.playerShop.SecondarySpeedDescription[index].Split(" ");
+                                managerVariables.Weapon1.fireRate = 1/Int32.Parse(inpAdd[3]);
+                                managerVariables.Weapon2.fireRate = 1 / Int32.Parse(inpAdd[3]);
+                            }
+                        }
+                    }
+                    // do code
+
+                }
+                else
+                {
+                    if (shop.playerShop.SecondarySpeedBool[index - 1] && !shop.playerShop.SecondarySpeedBool[index])
+                    {
+                        int costOn = 1;
+                        if (inp[1] != " ") costOn++;
+                        if (inp[2] != " ") costOn++;
+
+                        for (int i = 0; i < costOn; i++)
+                        {
+                            if (managerVariables.PlayerStats.Materials[Conv(inp[i].Split(":")[0]) + 1] < Int32.Parse(inp[i].Split(":")[1]))
+                            {
+
+                            }
+                            else if (i == costOn - 1)
+                            {
+                                transform.GetChild(0).gameObject.SetActive(false);
+                                transform.GetChild(1).gameObject.SetActive(true);
+                                shop.playerShop.SecondarySpeedBool[index] = true;
+
+                                for (int j = 0; j < costOn; j++) managerVariables.PlayerStats.Materials[Conv(inp[j].Split(":")[0]) + 1] -= Int32.Parse(inp[j].Split(":")[1]);
+
+                                string[] inpAdd = shop.playerShop.SecondarySpeedDescription[index].Split(" ");
+                                managerVariables.Weapon1.fireRate = 1 / Int32.Parse(inpAdd[3]);
+                                managerVariables.Weapon2.fireRate = 1 / Int32.Parse(inpAdd[3]);
+                            }
+                        }
+                    }
+                    // do code
+
+                }
+            }
+        }
     }
 
     private void Update()
