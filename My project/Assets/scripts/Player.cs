@@ -19,6 +19,8 @@ public class Player : MonoBehaviour
     public bool usingWeapons = false;
     public bool usingArmor = false;
 
+    public ParticleSystem drill;
+
 
     [SerializeField] List<Sprite> Beh = new List<Sprite>();
     float behTick = 0;
@@ -148,6 +150,7 @@ public class Player : MonoBehaviour
             if(other.gameObject.GetComponent<Rocks>().Health < other.gameObject.GetComponent<Rocks>().MaxHealth) other.gameObject.GetComponentInChildren<HealthBar>().slider.gameObject.SetActive(true);
             if (controls.PlayerAttack)
             {
+                drill.Play();
                 other.gameObject.GetComponent<Rocks>().TakeHit(damage * Time.deltaTime);
 
             }
@@ -157,6 +160,8 @@ public class Player : MonoBehaviour
             if (other.gameObject.GetComponent<Coals>().Health < other.gameObject.GetComponent<Coals>().MaxHealth) other.gameObject.GetComponentInChildren<HealthBar>().slider.gameObject.SetActive(true);
             if (controls.PlayerAttack)
             {
+                drill.Play();
+
                 other.gameObject.GetComponent<Coals>().TakeHit(damage * Time.deltaTime);
 
             }

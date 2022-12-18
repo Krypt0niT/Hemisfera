@@ -33,7 +33,7 @@ public class Enemy : MonoBehaviour
         float b = Random.Range(140,255);
 
         GetComponent<SpriteRenderer>().color = new Color32((byte)r,(byte)g,(byte)b,255);
-        float rnd = Random.Range(1, managerVariables.RaidStrengh);
+        float rnd = Random.Range(0.5f, managerVariables.RaidStrengh);
         transform.localScale = new Vector3(rnd, rnd,transform.localScale.z);
         health = Random.Range(1, managerVariables.RaidStrengh) *10;
     }

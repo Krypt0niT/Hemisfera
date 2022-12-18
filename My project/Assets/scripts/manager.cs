@@ -20,7 +20,7 @@ public class manager : MonoBehaviour
     bool firsttime = true;
 
     int RaidPower = 4;
-    public float RaidStrengh = 1;
+    public float RaidStrengh = 0.5f;
     int enemyAlive = 0;
 
 
