@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Rock
   - Coal
+  - Enemy
   layers:
   - Default
   - TransparentFX

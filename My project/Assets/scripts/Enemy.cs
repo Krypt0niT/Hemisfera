@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
 {
     SpriteRenderer EnemyRend;
     string animState = "Pohyb";
+    public float health = 10;
     float speed = 2;
     bool finish = false;
 
@@ -77,6 +78,12 @@ public class Enemy : MonoBehaviour
         }
 
 
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
+
+
 
 
 
@@ -132,6 +139,7 @@ public class Enemy : MonoBehaviour
         {
             moveOfset = Random.Range(1f,2f);
             finish = true;
+
         }
     }
 }

@@ -17,14 +17,13 @@ public class manager : MonoBehaviour
     float dayTick = 0;
     float raidSpawner = 0;
     int raidSpawned = 0;
+    bool firsttime = true;
 
-    int RaidPower = 50;
+    int RaidPower = 10;
     int enemyAlive = 0;
-    
 
-    public float BulletDamage = 5;
-    public float BulletSpeed = 20;
-    public float fireRate = 0.5f;
+
+
 
 
     public float BaseHP = 100;
@@ -35,10 +34,52 @@ public class manager : MonoBehaviour
     public class Player
     {
         public float speed = 5f;
-        public int[] Materials = new int[6] {0,0,0,0,0,0};
+        public int[] Materials = new int[8] { 0, 0, 0, 0, 0, 0, 0, 0 };
 
     }
     public Player PlayerStats = new Player();
+
+    public class Weapon
+    {
+        public float BulletDamage;
+        public float BulletSpeed;
+        public float fireRate;
+        public float rozptyl;
+        public Weapon(int order)
+        {
+            if(order == 0)
+            {
+                BulletDamage = 5;
+                BulletSpeed = 80;
+                fireRate = 1f;
+                rozptyl = 2;
+                
+            }
+            if (order == 1)
+            {
+                BulletDamage = 4;
+                BulletSpeed = 100;
+                fireRate = 0.1f;
+                rozptyl = 20;
+            }
+            else
+            {
+                BulletDamage = 4;
+                BulletSpeed = 100;
+                fireRate = 0.2f;
+                rozptyl = 5;
+            }
+        }
+    }
+
+
+
+
+
+    public Weapon Weapon0 = new Weapon(0);
+    public Weapon Weapon1 = new Weapon(1);
+    public Weapon Weapon2 = new Weapon(2);
+
     void Start()
     {
         for (float i = 10; i < 1000; i += 17 - Mathf.Sqrt(Random.Range(1f, 256f)))
@@ -64,12 +105,12 @@ public class manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print("Coal: " + PlayerStats.Materials[0].ToString() 
+        /*print("Coal: " + PlayerStats.Materials[0].ToString() 
             + "   stone: " + PlayerStats.Materials[1].ToString() 
             + "   iron: " + PlayerStats.Materials[2].ToString()
             + "   gold: " + PlayerStats.Materials[3].ToString()
             + "   dia: " + PlayerStats.Materials[4].ToString()
-            + "   haluz: " + PlayerStats.Materials[5].ToString());
+            + "   haluz: " + PlayerStats.Materials[5].ToString());*/
         dayTick += Time.deltaTime;
         if (dayTick >= 1)
         {
@@ -81,10 +122,15 @@ public class manager : MonoBehaviour
                 GameObject.Find("Main Camera").GetComponent<Camera>().backgroundColor = new Color32(63, 40, 41, 255);
                 raid = true;
                 dayTick = 0;
-                enemyAlive = GameObject.Find("Spawner").transform.childCount;
+                if (firsttime)
+                {
+                    spawner.GetComponent<Spawner>().spawn(RaidPower, 1);
+                    firsttime = false;
+                }
+                enemyAlive = GameObject.Find("Enemies").transform.childCount;
                 if (enemyAlive == 0)
                 {
-
+                    firsttime = true;
                     raid = false;
                     dayTime = 0;
                     timer.GetComponent<TextMeshPro>().text = dayTime.ToString();
@@ -95,6 +141,7 @@ public class manager : MonoBehaviour
             }
             else
             {
+                raidSpawned = 0;
                 dayTime++;
                 dayTick = 0;
                 timer.GetComponent<TextMeshPro>().text = dayTime.ToString();
@@ -105,6 +152,7 @@ public class manager : MonoBehaviour
         }
         if (raid)
         {
+            print(raidSpawned);
             if(raidSpawned < RaidPower)
             {
                 raidSpawner += Time.deltaTime;
