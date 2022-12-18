@@ -26,6 +26,9 @@ public class HoverOver : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        print(main);
+        print(route);
+        print(index);
         if (main == "Player")
         {
             if (route == "Damage")
@@ -121,11 +124,104 @@ public class HoverOver : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
         }
         else if (main == "Base")
         {
+            if (route == "Shield")
+            {
+                shop.Name.text = shop.playerShop.shieldName[index];
+                shop.Description.text = shop.playerShop.shieldDescription[index];
+                string[] inp = shop.playerShop.shieldCost[index].Split(",");
+                if (inp[0] == " ") shop.Cost0.SetActive(false);
+                else
+                {
+                    shop.Cost0.SetActive(true);
+                    string[] inp2 = inp[0].Split(":");
+                    shop.Cost0.GetComponent<Image>().sprite = Materials[Int32.Parse(inp2[0])];
+                    shop.Cost0.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = inp2[1];
+                }
+                if (inp[1] == " ") shop.Cost1.SetActive(false);
+                else
+                {
+                    shop.Cost1.SetActive(true);
+                    string[] inp2 = inp[1].Split(":");
+                    shop.Cost1.GetComponent<Image>().sprite = Materials[Int32.Parse(inp2[0])];
+                    shop.Cost1.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = inp2[1];
+                }
+                if (inp[2] == " ") shop.Cost2.SetActive(false);
+                else
+                {
+                    shop.Cost2.SetActive(true);
+                    string[] inp2 = inp[2].Split(":");
+                    shop.Cost2.GetComponent<Image>().sprite = Materials[Int32.Parse(inp2[0])];
+                    shop.Cost2.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = inp2[1];
+                }
+            }
+            else if (route == "Health")
+            {
+                shop.Name.text = shop.playerShop.healthName[index];
+                shop.Description.text = shop.playerShop.healthDescription[index];
+                string[] inp = shop.playerShop.healthCost[index].Split(",");
+                if (inp[0] == " ") shop.Cost0.SetActive(false);
+                else
+                {
+                    shop.Cost0.SetActive(true);
+                    string[] inp2 = inp[0].Split(":");
+                    shop.Cost0.GetComponent<Image>().sprite = Materials[Int32.Parse(inp2[0])];
+                    shop.Cost0.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = inp2[1];
+                }
+                if (inp[1] == " ") shop.Cost1.SetActive(false);
+                else
+                {
+                    shop.Cost1.SetActive(true);
+                    string[] inp2 = inp[1].Split(":");
+                    shop.Cost1.GetComponent<Image>().sprite = Materials[Int32.Parse(inp2[0])];
+                    shop.Cost1.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = inp2[1];
+                }
+                if (inp[2] == " ") shop.Cost2.SetActive(false);
+                else
+                {
+                    shop.Cost2.SetActive(true);
+                    string[] inp2 = inp[2].Split(":");
+                    shop.Cost2.GetComponent<Image>().sprite = Materials[Int32.Parse(inp2[0])];
+                    shop.Cost2.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = inp2[1];
+                }
+            }
+            else if (route == "Repair")
+            {
+                shop.Name.text = shop.playerShop.repairName[0];
+                shop.Description.text = shop.playerShop.repairDescription[0];
+                string[] inp = shop.playerShop.repairCost[0].Split(",");
+                if (inp[0] == " ") shop.Cost0.SetActive(false);
+                else
+                {
+                    shop.Cost0.SetActive(true);
+                    string[] inp2 = inp[0].Split(":");
+                    shop.Cost0.GetComponent<Image>().sprite = Materials[Int32.Parse(inp2[0])];
+                    shop.Cost0.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = inp2[1];
+                }
+                if (inp[1] == " ") shop.Cost1.SetActive(false);
+                else
+                {
+                    shop.Cost1.SetActive(true);
+                    string[] inp2 = inp[1].Split(":");
+                    shop.Cost1.GetComponent<Image>().sprite = Materials[Int32.Parse(inp2[0])];
+                    shop.Cost1.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = inp2[1];
+                }
+                if (inp[2] == " ") shop.Cost2.SetActive(false);
+                else
+                {
+                    shop.Cost2.SetActive(true);
+                    string[] inp2 = inp[2].Split(":");
+                    shop.Cost2.GetComponent<Image>().sprite = Materials[Int32.Parse(inp2[0])];
+                    shop.Cost2.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = inp2[1];
+                }
+            }
+        }
+        else if (main == "MainWeapon")
+        {
             if (route == "Damage")
             {
-                shop.Name.text = shop.playerShop.damageName[index];
-                shop.Description.text = shop.playerShop.damageDescription[index];
-                string[] inp = shop.playerShop.damageCost[index].Split(",");
+                shop.Name.text = shop.playerShop.MainDamageName[index];
+                shop.Description.text = shop.playerShop.MainDamageDescription[index];
+                string[] inp = shop.playerShop.MainDamageCost[index].Split(",");
                 if (inp[0] == " ") shop.Cost0.SetActive(false);
                 else
                 {
@@ -153,9 +249,9 @@ public class HoverOver : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
             }
             else if (route == "Speed")
             {
-                shop.Name.text = shop.playerShop.speedName[index];
-                shop.Description.text = shop.playerShop.speedDescription[index];
-                string[] inp = shop.playerShop.speedCost[index].Split(",");
+                shop.Name.text = shop.playerShop.MainSpeedName[index];
+                shop.Description.text = shop.playerShop.MainSpeedDescription[index];
+                string[] inp = shop.playerShop.MainSpeedCost[index].Split(",");
                 if (inp[0] == " ") shop.Cost0.SetActive(false);
                 else
                 {
@@ -181,11 +277,74 @@ public class HoverOver : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
                     shop.Cost2.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = inp2[1];
                 }
             }
-            else if (route == "Hardness")
+            else if (route == "Accuracy")
             {
-                shop.Name.text = shop.playerShop.hardnessName[index];
-                shop.Description.text = shop.playerShop.hardnessDescription[index];
-                string[] inp = shop.playerShop.hardnessCost[index].Split(",");
+                shop.Name.text = shop.playerShop.MainAccuracyName[0];
+                shop.Description.text = shop.playerShop.MainAccuracyDescription[0];
+                string[] inp = shop.playerShop.MainAccuracyCost[0].Split(",");
+                if (inp[0] == " ") shop.Cost0.SetActive(false);
+                else
+                {
+                    shop.Cost0.SetActive(true);
+                    string[] inp2 = inp[0].Split(":");
+                    shop.Cost0.GetComponent<Image>().sprite = Materials[Int32.Parse(inp2[0])];
+                    shop.Cost0.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = inp2[1];
+                }
+                if (inp[1] == " ") shop.Cost1.SetActive(false);
+                else
+                {
+                    shop.Cost1.SetActive(true);
+                    string[] inp2 = inp[1].Split(":");
+                    shop.Cost1.GetComponent<Image>().sprite = Materials[Int32.Parse(inp2[0])];
+                    shop.Cost1.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = inp2[1];
+                }
+                if (inp[2] == " ") shop.Cost2.SetActive(false);
+                else
+                {
+                    shop.Cost2.SetActive(true);
+                    string[] inp2 = inp[2].Split(":");
+                    shop.Cost2.GetComponent<Image>().sprite = Materials[Int32.Parse(inp2[0])];
+                    shop.Cost2.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = inp2[1];
+                }
+            }
+        }
+        else if (main == "SecondaryWeapons")
+        {
+            if (route == "Damage")
+            {
+                shop.Name.text = shop.playerShop.SecondaryDamageName[index];
+                shop.Description.text = shop.playerShop.SecondaryDamageDescription[index];
+                string[] inp = shop.playerShop.SecondaryDamageCost[index].Split(",");
+                if (inp[0] == " ") shop.Cost0.SetActive(false);
+                else
+                {
+                    shop.Cost0.SetActive(true);
+                    string[] inp2 = inp[0].Split(":");
+                    shop.Cost0.GetComponent<Image>().sprite = Materials[Int32.Parse(inp2[0])];
+                    shop.Cost0.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = inp2[1];
+                }
+                if (inp[1] == " ") shop.Cost1.SetActive(false);
+                else
+                {
+                    shop.Cost1.SetActive(true);
+                    string[] inp2 = inp[1].Split(":");
+                    shop.Cost1.GetComponent<Image>().sprite = Materials[Int32.Parse(inp2[0])];
+                    shop.Cost1.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = inp2[1];
+                }
+                if (inp[2] == " ") shop.Cost2.SetActive(false);
+                else
+                {
+                    shop.Cost2.SetActive(true);
+                    string[] inp2 = inp[2].Split(":");
+                    shop.Cost2.GetComponent<Image>().sprite = Materials[Int32.Parse(inp2[0])];
+                    shop.Cost2.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = inp2[1];
+                }
+            }
+            else if (route == "Speed")
+            {
+                shop.Name.text = shop.playerShop.SecondarySpeedName[index];
+                shop.Description.text = shop.playerShop.SecondarySpeedDescription[index];
+                string[] inp = shop.playerShop.SecondarySpeedCost[index].Split(",");
                 if (inp[0] == " ") shop.Cost0.SetActive(false);
                 else
                 {
@@ -459,6 +618,170 @@ public class HoverOver : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
                 }
             }
         }
+        else if (main == "Base")
+        {
+            if (route == "Shield")
+            {
+                string[] inp = shop.playerShop.shieldCost[index].Split(",");
+                if (index == 0)
+                {
+                    if (!shop.playerShop.shieldBool[0])
+                    {
+                        int costOn = 1;
+                        if (inp[1] != " ") costOn++;
+                        if (inp[2] != " ") costOn++;
+
+                        for (int i = 0; i < costOn; i++)
+                        {
+                            if (managerVariables.PlayerStats.Materials[Conv(inp[i].Split(":")[0]) + 1] < Int32.Parse(inp[i].Split(":")[1]))
+                            {
+
+                            }
+                            else if (i == costOn - 1)
+                            {
+                                transform.GetChild(0).gameObject.SetActive(false);
+                                transform.GetChild(1).gameObject.SetActive(true);
+                                shop.playerShop.shieldBool[0] = true;
+
+                                for (int j = 0; j < costOn; j++) managerVariables.PlayerStats.Materials[Conv(inp[j].Split(":")[0]) + 1] -= Int32.Parse(inp[j].Split(":")[1]);
+
+                            }
+
+
+                        }
+                    }
+                }
+                else
+                {
+                    if (shop.playerShop.shieldBool[index - 1] && !shop.playerShop.shieldBool[index])
+                    {
+                        int costOn = 1;
+                        if (inp[1] != " ") costOn++;
+                        if (inp[2] != " ") costOn++;
+
+                        for (int i = 0; i < costOn; i++)
+                        {
+                            if (managerVariables.PlayerStats.Materials[Conv(inp[i].Split(":")[0]) + 1] < Int32.Parse(inp[i].Split(":")[1]))
+                            {
+
+                            }
+                            else if (i == costOn - 1)
+                            {
+                                transform.GetChild(0).gameObject.SetActive(false);
+                                transform.GetChild(1).gameObject.SetActive(true);
+                                shop.playerShop.shieldBool[index] = true;
+
+                                for (int j = 0; j < costOn; j++) managerVariables.PlayerStats.Materials[Conv(inp[j].Split(":")[0]) + 1] -= Int32.Parse(inp[j].Split(":")[1]);
+                            }
+
+
+                        }
+                    }
+                    // do code
+
+                }
+            }
+            else if (route == "Health")
+            {
+                string[] inp = shop.playerShop.healthCost[index].Split(",");
+                if (index == 0)
+                {
+                    if (!shop.playerShop.healthBool[0])
+                    {
+                        int costOn = 1;
+                        if (inp[1] != " ") costOn++;
+                        if (inp[2] != " ") costOn++;
+
+                        for (int i = 0; i < costOn; i++)
+                        {
+                            if (managerVariables.PlayerStats.Materials[Conv(inp[i].Split(":")[0]) + 1] < Int32.Parse(inp[i].Split(":")[1]))
+                            {
+
+                            }
+                            else if (i == costOn - 1)
+                            {
+                                transform.GetChild(0).gameObject.SetActive(false);
+                                transform.GetChild(1).gameObject.SetActive(true);
+                                shop.playerShop.healthBool[0] = true;
+
+                                for (int j = 0; j < costOn; j++) managerVariables.PlayerStats.Materials[Conv(inp[j].Split(":")[0]) + 1] -= Int32.Parse(inp[j].Split(":")[1]);
+
+                                string[] inpAdd = shop.playerShop.healthDescription[index].Split(" ");
+
+
+                                managerVariables.BaseMax += Int32.Parse(inpAdd[3]);
+
+                            }
+                        }
+                    }
+                    // do code
+
+                }
+                else
+                {
+                    if (shop.playerShop.healthBool[index - 1] && !shop.playerShop.healthBool[index])
+                    {
+                        int costOn = 1;
+                        if (inp[1] != " ") costOn++;
+                        if (inp[2] != " ") costOn++;
+
+                        for (int i = 0; i < costOn; i++)
+                        {
+                            if (managerVariables.PlayerStats.Materials[Conv(inp[i].Split(":")[0]) + 1] < Int32.Parse(inp[i].Split(":")[1]))
+                            {
+
+                            }
+                            else if (i == costOn - 1)
+                            {
+                                transform.GetChild(0).gameObject.SetActive(false);
+                                transform.GetChild(1).gameObject.SetActive(true);
+                                shop.playerShop.healthBool[index] = true;
+
+                                for (int j = 0; j < costOn; j++) managerVariables.PlayerStats.Materials[Conv(inp[j].Split(":")[0]) + 1] -= Int32.Parse(inp[j].Split(":")[1]);
+
+                                string[] inpAdd = shop.playerShop.healthDescription[index].Split(" ");
+
+                                managerVariables.BaseMax += Int32.Parse(inpAdd[3]);
+
+                            }
+                        }
+                    }
+                    // do code
+
+                }
+            }
+            else if (route == "Repair")
+            {
+                string[] inp = shop.playerShop.repairCost[index].Split(",");
+                if (index == 0)
+                {
+
+                    int costOn = 1;
+                    if (inp[1] != " ") costOn++;
+                    if (inp[2] != " ") costOn++;
+
+                    for (int i = 0; i < costOn; i++)
+                    {
+                        if (managerVariables.PlayerStats.Materials[Conv(inp[i].Split(":")[0]) + 1] < Int32.Parse(inp[i].Split(":")[1]))
+                        {
+
+                        }
+                        else if (i == costOn - 1)
+                        {
+                            transform.GetChild(0).gameObject.SetActive(false);
+
+                            for (int j = 0; j < costOn; j++) managerVariables.PlayerStats.Materials[Conv(inp[j].Split(":")[0]) + 1] -= Int32.Parse(inp[j].Split(":")[1]);
+
+                            managerVariables.BaseHP = managerVariables.BaseMax;
+                        }
+                    }
+                    
+
+
+                }
+            }
+        }
+
     }
 
     private void Update()

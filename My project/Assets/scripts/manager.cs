@@ -29,6 +29,7 @@ public class manager : MonoBehaviour
 
 
     public float BaseHP = 100;
+    public float BaseMax = 100;
 
     [SerializeField] GameObject timer;
     [SerializeField] GameObject timerBG;

@@ -23,5 +23,6 @@ public class UI : MonoBehaviour
             hodnoty[i].text = managerVariables.PlayerStats.Materials[i].ToString();
         }
         baseHealthSlider.GetComponent<Slider>().value = managerVariables.BaseHP;
+        baseHealthSlider.GetComponent<Slider>().maxValue = managerVariables.BaseMax;
     }
 }
