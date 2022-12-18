@@ -19,6 +19,8 @@ public class Player : MonoBehaviour
     public bool usingWeapons = false;
     public bool usingArmor = false;
 
+    public ParticleSystem drill;
+
 
     [SerializeField] List<Sprite> Beh = new List<Sprite>();
     float behTick = 0;
@@ -149,7 +151,8 @@ public class Player : MonoBehaviour
             if (controls.PlayerAttack)
             {
                 other.gameObject.GetComponent<Rocks>().TakeHit(managerVariables.PlayerStats.damage * Time.deltaTime);
-
+                drill.Play();
+                other.gameObject.GetComponent<Rocks>().TakeHit(damage * Time.deltaTime);
             }
         }
         else if (other.gameObject.tag == "Coal")
@@ -158,7 +161,8 @@ public class Player : MonoBehaviour
             if (controls.PlayerAttack)
             {
                 other.gameObject.GetComponent<Coals>().TakeHit(managerVariables.PlayerStats.damage * Time.deltaTime);
-
+                drill.Play();
+                other.gameObject.GetComponent<Coals>().TakeHit(damage * Time.deltaTime);
             }
         }
     }

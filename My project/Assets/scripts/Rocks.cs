@@ -98,6 +98,7 @@ public class Rocks : MonoBehaviour
     public void TakeHit(float damage)
     {
         Health -= damage;
+        GameObject.Find("Player").GetComponent<Player>().drill.Play();
         HealthBar.SetHealth(Health, MaxHealth);
 
         if (Health <= 0)

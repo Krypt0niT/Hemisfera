@@ -20,7 +20,7 @@ public class manager : MonoBehaviour
     bool firsttime = true;
 
     int RaidPower = 4;
-    public float RaidStrengh = 1;
+    public float RaidStrengh = 0.5f;
     int enemyAlive = 0;
 
 
@@ -48,6 +48,7 @@ public class manager : MonoBehaviour
         public float BulletSpeed;
         public float fireRate;
         public float rozptyl;
+        public float zlom;
         public Weapon(int order)
         {
             if(order == 0)
@@ -56,14 +57,16 @@ public class manager : MonoBehaviour
                 BulletSpeed = 80;
                 fireRate = 1f;
                 rozptyl = 2;
+                zlom = 1006;
                 
             }
             if (order == 1)
             {
                 BulletDamage = 4;
                 BulletSpeed = 100;
-                fireRate = 0.1f;
+                fireRate = 0.2f;
                 rozptyl = 15;
+                zlom = 756.4f;
             }
             else
             {
@@ -71,6 +74,7 @@ public class manager : MonoBehaviour
                 BulletSpeed = 100;
                 fireRate = 0.2f;
                 rozptyl = 15;
+                zlom = 1281;
             }
         }
     }
@@ -125,7 +129,6 @@ public class manager : MonoBehaviour
                 GameObject.Find("Main Camera").GetComponent<Camera>().backgroundColor = new Color32(63, 40, 41, 255);
                 raid = true;
                 dayTick = 0;
-                print(RaidPower);
                 if (firsttime)
                 {
                     spawner.GetComponent<Spawner>().spawn(RaidPower);
@@ -158,7 +161,7 @@ public class manager : MonoBehaviour
         }
         if (raid)
         {
-            //print(raidSpawned);
+            
             if(raidSpawned < RaidPower)
             {
                 raidSpawner += Time.deltaTime;
