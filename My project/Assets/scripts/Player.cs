@@ -152,7 +152,6 @@ public class Player : MonoBehaviour
             {
                 other.gameObject.GetComponent<Rocks>().TakeHit(managerVariables.PlayerStats.damage * Time.deltaTime);
                 drill.Play();
-                other.gameObject.GetComponent<Rocks>().TakeHit(damage * Time.deltaTime);
             }
         }
         else if (other.gameObject.tag == "Coal")
@@ -162,7 +161,6 @@ public class Player : MonoBehaviour
             {
                 other.gameObject.GetComponent<Coals>().TakeHit(managerVariables.PlayerStats.damage * Time.deltaTime);
                 drill.Play();
-                other.gameObject.GetComponent<Coals>().TakeHit(damage * Time.deltaTime);
             }
         }
     }
