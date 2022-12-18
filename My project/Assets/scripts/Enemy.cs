@@ -9,9 +9,8 @@ public class Enemy : MonoBehaviour
     public float health = 10;
     float speed = 2;
     bool finish = false;
+    float damage;
 
-    float moveOfset = 0;
-    float moveOfsetTick = 0;
     manager managerVariables;
 
     [SerializeField] List<Sprite> Pohyb = new List<Sprite>();
@@ -34,6 +33,9 @@ public class Enemy : MonoBehaviour
         float b = Random.Range(140,255);
 
         GetComponent<SpriteRenderer>().color = new Color32((byte)r,(byte)g,(byte)b,255);
+        float rnd = Random.Range(1, managerVariables.RaidStrengh);
+        transform.localScale = new Vector3(rnd, rnd,transform.localScale.z);
+        health = Random.Range(1, managerVariables.RaidStrengh) *10;
     }
 
     void Update()
@@ -50,28 +52,7 @@ public class Enemy : MonoBehaviour
 
             }
         }
-        /*else
-        {
-            
-            if(moveOfsetTick <= moveOfset)
-            {
-                moveOfsetTick += (transform.position.x + (speed * Time.deltaTime));
-                if (transform.position.x < 0)
-                {
-                    transform.position = new Vector3(transform.position.x + (speed * Time.deltaTime), transform.position.y, transform.position.z);
-                }
-            }
-            if (moveOfsetTick >= moveOfset)
-            {
-                moveOfsetTick -= (transform.position.x - (speed * Time.deltaTime));
-                if (transform.position.x > 0)
-                {
-                    transform.position = new Vector3(transform.position.x - (speed * Time.deltaTime), transform.position.y, transform.position.z);
-                }
-            }
-
-
-        }*/
+        
         else
         {
             animState = "attacking";
@@ -137,7 +118,6 @@ public class Enemy : MonoBehaviour
     {
         if (other.gameObject.name == "AttackArea")
         {
-            moveOfset = Random.Range(1f,2f);
             finish = true;
 
         }

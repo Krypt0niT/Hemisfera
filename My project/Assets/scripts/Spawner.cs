@@ -17,7 +17,7 @@ public class Spawner : MonoBehaviour
     {
         
     }
-    public void spawn(int count,float strengh)
+    public void spawn(int count)
     {
         
         int rnd = Random.Range(0,5);

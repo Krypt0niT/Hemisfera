@@ -19,7 +19,8 @@ public class manager : MonoBehaviour
     int raidSpawned = 0;
     bool firsttime = true;
 
-    int RaidPower = 10;
+    int RaidPower = 4;
+    public float RaidStrengh = 1;
     int enemyAlive = 0;
 
 
@@ -60,14 +61,14 @@ public class manager : MonoBehaviour
                 BulletDamage = 4;
                 BulletSpeed = 100;
                 fireRate = 0.1f;
-                rozptyl = 20;
+                rozptyl = 15;
             }
             else
             {
                 BulletDamage = 4;
                 BulletSpeed = 100;
                 fireRate = 0.2f;
-                rozptyl = 5;
+                rozptyl = 15;
             }
         }
     }
@@ -122,9 +123,10 @@ public class manager : MonoBehaviour
                 GameObject.Find("Main Camera").GetComponent<Camera>().backgroundColor = new Color32(63, 40, 41, 255);
                 raid = true;
                 dayTick = 0;
+                print(RaidPower);
                 if (firsttime)
                 {
-                    spawner.GetComponent<Spawner>().spawn(RaidPower, 1);
+                    spawner.GetComponent<Spawner>().spawn(RaidPower);
                     firsttime = false;
                 }
                 enemyAlive = GameObject.Find("Enemies").transform.childCount;
@@ -133,6 +135,8 @@ public class manager : MonoBehaviour
                     firsttime = true;
                     raid = false;
                     dayTime = 0;
+                    RaidPower += 2;
+                    RaidStrengh += 0.1f;
                     timer.GetComponent<TextMeshPro>().text = dayTime.ToString();
                     timerBG.GetComponent<SpriteRenderer>().color = new Color32(36, 31, 31, 255);
                     GameObject.Find("Main Camera").GetComponent<Camera>().backgroundColor = new Color32(51, 51, 51, 255);
@@ -160,7 +164,7 @@ public class manager : MonoBehaviour
                 {
                     raidSpawned++;
                     raidSpawner = 0;
-                    spawner.GetComponent<Spawner>().spawn(RaidPower, 1);
+                    spawner.GetComponent<Spawner>().spawn(RaidPower);
                 }
             }
             
