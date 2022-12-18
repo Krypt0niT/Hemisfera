@@ -11,6 +11,8 @@ public class weapons : MonoBehaviour
     [SerializeField] GameObject weapon2;
     [SerializeField] GameObject bullet;
     [SerializeField] Vector3 bulletOfset;
+
+    [SerializeField] ParticleSystem ammo;
     float fireTick = 0;
 
     public int order;
@@ -33,7 +35,7 @@ public class weapons : MonoBehaviour
         else
             thisWeapon = managerVariables.Weapon2;
 
-
+        print(order);
     }
 
     // Update is called once per frame
@@ -42,7 +44,7 @@ public class weapons : MonoBehaviour
         if (GameObject.Find("Player").GetComponent<Player>().usingWeapons)
         {
             
-            if (Input.mousePosition.x > 960)
+            if (Input.mousePosition.x > thisWeapon.zlom)
             {
                 weapon1.SetActive(true);
                 weapon2.SetActive(false);
@@ -52,7 +54,7 @@ public class weapons : MonoBehaviour
                     if (fireTick >= thisWeapon.fireRate)
                     {
                         fireTick = 0;
-
+                        ammo.Play();
                         Instantiate(bullet, gameObject.transform.Find("Firespot").transform.position, this.gameObject.transform.rotation * Quaternion.Euler(0,0, UnityEngine.Random.Range(-thisWeapon.rozptyl, thisWeapon.rozptyl)))
                             .GetComponent<bullet>().parent = order;
                     }
@@ -60,7 +62,7 @@ public class weapons : MonoBehaviour
                 }
                 
             }
-            if (Input.mousePosition.x < 960)
+            if (Input.mousePosition.x < thisWeapon.zlom)
             {
                 weapon1.SetActive(false);
                 weapon2.SetActive(true);
@@ -70,7 +72,7 @@ public class weapons : MonoBehaviour
                     if (fireTick >= thisWeapon.fireRate)
                     {
                         fireTick = 0;
-
+                        ammo.Play();
                         Instantiate(bullet, gameObject.transform.Find("Firespot").transform.position, this.gameObject.transform.rotation * Quaternion.Euler(0, 0, UnityEngine.Random.Range(-thisWeapon.rozptyl, thisWeapon.rozptyl)))
                                                    .GetComponent<bullet>().parent = order;
                     }
