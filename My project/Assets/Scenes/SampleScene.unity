@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.99999946, g: 0.5777502, b: 0.5782623, a: 1}
+  m_IndirectSpecularColor: {r: 0.99999946, g: 0.57776356, b: 0.5782453, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -49619,6 +49619,7 @@ GameObject:
   - component: {fileID: 9024207623736483609}
   - component: {fileID: 9024207623736483614}
   - component: {fileID: 9024207623736483615}
+  - component: {fileID: 9024207623736483616}
   m_Layer: 5
   m_Name: Speed III
   m_TagString: Untagged
@@ -49700,6 +49701,30 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &9024207623736483616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9024207623736483613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae864202b0d5ec4cbc824400bf284ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shop: {fileID: 9024207625099663356}
+  main: SecondaryWeapons
+  route: Speed
+  index: 2
+  Materials:
+  - {fileID: 21300000, guid: d07db08979fb7a64dbce0b41ca8e97ff, type: 3}
+  - {fileID: 21300000, guid: 00125395fe960ad40bdb362df8c9f5a5, type: 3}
+  - {fileID: 21300000, guid: 4a203c1ec8c56b444966549600f2a80f, type: 3}
+  - {fileID: 21300000, guid: cbf8481b70e7ec64d812443f06c87bf3, type: 3}
+  - {fileID: 21300000, guid: 1560f3d1a39fef148b25b308550bd4bd, type: 3}
+  - {fileID: 21300000, guid: 3ff18866fc628ed438f15f328adad053, type: 3}
+  - {fileID: 21300000, guid: 42c226b347bbcb64fbd0de4294a6a5d4, type: 3}
 --- !u!224 &9024207623736696356
 RectTransform:
   m_ObjectHideFlags: 0
@@ -50245,6 +50270,7 @@ GameObject:
   - component: {fileID: 9024207623806517721}
   - component: {fileID: 9024207623806517726}
   - component: {fileID: 9024207623806517727}
+  - component: {fileID: 9024207623806517728}
   m_Layer: 5
   m_Name: Speed V
   m_TagString: Untagged
@@ -50326,6 +50352,30 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &9024207623806517728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9024207623806517725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae864202b0d5ec4cbc824400bf284ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shop: {fileID: 9024207625099663356}
+  main: MainWeapon
+  route: Speed
+  index: 4
+  Materials:
+  - {fileID: 21300000, guid: d07db08979fb7a64dbce0b41ca8e97ff, type: 3}
+  - {fileID: 21300000, guid: 00125395fe960ad40bdb362df8c9f5a5, type: 3}
+  - {fileID: 21300000, guid: 4a203c1ec8c56b444966549600f2a80f, type: 3}
+  - {fileID: 21300000, guid: cbf8481b70e7ec64d812443f06c87bf3, type: 3}
+  - {fileID: 21300000, guid: 1560f3d1a39fef148b25b308550bd4bd, type: 3}
+  - {fileID: 21300000, guid: 3ff18866fc628ed438f15f328adad053, type: 3}
+  - {fileID: 21300000, guid: 42c226b347bbcb64fbd0de4294a6a5d4, type: 3}
 --- !u!222 &9024207623807178037
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -50672,6 +50722,7 @@ GameObject:
   - component: {fileID: 9024207623846264161}
   - component: {fileID: 9024207623846264166}
   - component: {fileID: 9024207623846264167}
+  - component: {fileID: 9024207623846264168}
   m_Layer: 5
   m_Name: Speed I
   m_TagString: Untagged
@@ -50753,6 +50804,30 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &9024207623846264168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9024207623846264165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae864202b0d5ec4cbc824400bf284ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shop: {fileID: 9024207625099663356}
+  main: MainWeapon
+  route: Speed
+  index: 0
+  Materials:
+  - {fileID: 21300000, guid: d07db08979fb7a64dbce0b41ca8e97ff, type: 3}
+  - {fileID: 21300000, guid: 00125395fe960ad40bdb362df8c9f5a5, type: 3}
+  - {fileID: 21300000, guid: 4a203c1ec8c56b444966549600f2a80f, type: 3}
+  - {fileID: 21300000, guid: cbf8481b70e7ec64d812443f06c87bf3, type: 3}
+  - {fileID: 21300000, guid: 1560f3d1a39fef148b25b308550bd4bd, type: 3}
+  - {fileID: 21300000, guid: 3ff18866fc628ed438f15f328adad053, type: 3}
+  - {fileID: 21300000, guid: 42c226b347bbcb64fbd0de4294a6a5d4, type: 3}
 --- !u!222 &9024207623853111944
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -51474,6 +51549,7 @@ GameObject:
   - component: {fileID: 9024207623932166874}
   - component: {fileID: 9024207623932166875}
   - component: {fileID: 9024207623932166872}
+  - component: {fileID: 9024207623932166879}
   m_Layer: 5
   m_Name: Speed IV
   m_TagString: Untagged
@@ -51481,6 +51557,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &9024207623932166879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9024207623932166878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae864202b0d5ec4cbc824400bf284ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shop: {fileID: 9024207625099663356}
+  main: SecondaryWeapons
+  route: Damage
+  index: 3
+  Materials:
+  - {fileID: 21300000, guid: d07db08979fb7a64dbce0b41ca8e97ff, type: 3}
+  - {fileID: 21300000, guid: 00125395fe960ad40bdb362df8c9f5a5, type: 3}
+  - {fileID: 21300000, guid: 4a203c1ec8c56b444966549600f2a80f, type: 3}
+  - {fileID: 21300000, guid: cbf8481b70e7ec64d812443f06c87bf3, type: 3}
+  - {fileID: 21300000, guid: 1560f3d1a39fef148b25b308550bd4bd, type: 3}
+  - {fileID: 21300000, guid: 3ff18866fc628ed438f15f328adad053, type: 3}
+  - {fileID: 21300000, guid: 42c226b347bbcb64fbd0de4294a6a5d4, type: 3}
 --- !u!224 &9024207623967450460
 RectTransform:
   m_ObjectHideFlags: 0
@@ -51749,6 +51849,7 @@ GameObject:
   - component: {fileID: 9024207623986211350}
   - component: {fileID: 9024207623986211351}
   - component: {fileID: 9024207623986211348}
+  - component: {fileID: 9024207623986211371}
   m_Layer: 5
   m_Name: Speed II
   m_TagString: Untagged
@@ -51756,6 +51857,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &9024207623986211371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9024207623986211370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae864202b0d5ec4cbc824400bf284ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shop: {fileID: 9024207625099663356}
+  main: SecondaryWeapons
+  route: Damage
+  index: 1
+  Materials:
+  - {fileID: 21300000, guid: d07db08979fb7a64dbce0b41ca8e97ff, type: 3}
+  - {fileID: 21300000, guid: 00125395fe960ad40bdb362df8c9f5a5, type: 3}
+  - {fileID: 21300000, guid: 4a203c1ec8c56b444966549600f2a80f, type: 3}
+  - {fileID: 21300000, guid: cbf8481b70e7ec64d812443f06c87bf3, type: 3}
+  - {fileID: 21300000, guid: 1560f3d1a39fef148b25b308550bd4bd, type: 3}
+  - {fileID: 21300000, guid: 3ff18866fc628ed438f15f328adad053, type: 3}
+  - {fileID: 21300000, guid: 42c226b347bbcb64fbd0de4294a6a5d4, type: 3}
 --- !u!1 &9024207624005749522
 GameObject:
   m_ObjectHideFlags: 0
@@ -52827,6 +52952,7 @@ GameObject:
   - component: {fileID: 9024207624213824477}
   - component: {fileID: 9024207624213824466}
   - component: {fileID: 9024207624213824467}
+  - component: {fileID: 9024207624213824478}
   m_Layer: 5
   m_Name: Accuracy
   m_TagString: Untagged
@@ -52916,6 +53042,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9024207624213824465}
   m_CullTransparentMesh: 1
+--- !u!114 &9024207624213824478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9024207624213824465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae864202b0d5ec4cbc824400bf284ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shop: {fileID: 9024207625099663356}
+  main: SecondaryWeapons
+  route: Accuracy
+  index: 0
+  Materials:
+  - {fileID: 21300000, guid: d07db08979fb7a64dbce0b41ca8e97ff, type: 3}
+  - {fileID: 21300000, guid: 00125395fe960ad40bdb362df8c9f5a5, type: 3}
+  - {fileID: 21300000, guid: 4a203c1ec8c56b444966549600f2a80f, type: 3}
+  - {fileID: 21300000, guid: cbf8481b70e7ec64d812443f06c87bf3, type: 3}
+  - {fileID: 21300000, guid: 1560f3d1a39fef148b25b308550bd4bd, type: 3}
+  - {fileID: 21300000, guid: 3ff18866fc628ed438f15f328adad053, type: 3}
+  - {fileID: 21300000, guid: 42c226b347bbcb64fbd0de4294a6a5d4, type: 3}
 --- !u!224 &9024207624214108998
 RectTransform:
   m_ObjectHideFlags: 0
@@ -54196,6 +54346,7 @@ GameObject:
   - component: {fileID: 9024207624387205408}
   - component: {fileID: 9024207624387205409}
   - component: {fileID: 9024207624387205414}
+  - component: {fileID: 9024207624387205416}
   m_Layer: 5
   m_Name: Speed II
   m_TagString: Untagged
@@ -54269,6 +54420,30 @@ RectTransform:
   m_AnchoredPosition: {x: -60.70005, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &9024207624387205416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9024207624387205412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae864202b0d5ec4cbc824400bf284ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shop: {fileID: 9024207625099663356}
+  main: MainWeapon
+  route: Speed
+  index: 1
+  Materials:
+  - {fileID: 21300000, guid: d07db08979fb7a64dbce0b41ca8e97ff, type: 3}
+  - {fileID: 21300000, guid: 00125395fe960ad40bdb362df8c9f5a5, type: 3}
+  - {fileID: 21300000, guid: 4a203c1ec8c56b444966549600f2a80f, type: 3}
+  - {fileID: 21300000, guid: cbf8481b70e7ec64d812443f06c87bf3, type: 3}
+  - {fileID: 21300000, guid: 1560f3d1a39fef148b25b308550bd4bd, type: 3}
+  - {fileID: 21300000, guid: 3ff18866fc628ed438f15f328adad053, type: 3}
+  - {fileID: 21300000, guid: 42c226b347bbcb64fbd0de4294a6a5d4, type: 3}
 --- !u!222 &9024207624393711024
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -54357,6 +54532,7 @@ GameObject:
   - component: {fileID: 9024207624420112972}
   - component: {fileID: 9024207624420112973}
   - component: {fileID: 9024207624420112962}
+  - component: {fileID: 9024207624420112974}
   m_Layer: 5
   m_Name: Speed I
   m_TagString: Untagged
@@ -54468,6 +54644,30 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &9024207624420112974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9024207624420112960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae864202b0d5ec4cbc824400bf284ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shop: {fileID: 9024207625099663356}
+  main: SecondaryWeapons
+  route: Speed
+  index: 0
+  Materials:
+  - {fileID: 21300000, guid: d07db08979fb7a64dbce0b41ca8e97ff, type: 3}
+  - {fileID: 21300000, guid: 00125395fe960ad40bdb362df8c9f5a5, type: 3}
+  - {fileID: 21300000, guid: 4a203c1ec8c56b444966549600f2a80f, type: 3}
+  - {fileID: 21300000, guid: cbf8481b70e7ec64d812443f06c87bf3, type: 3}
+  - {fileID: 21300000, guid: 1560f3d1a39fef148b25b308550bd4bd, type: 3}
+  - {fileID: 21300000, guid: 3ff18866fc628ed438f15f328adad053, type: 3}
+  - {fileID: 21300000, guid: 42c226b347bbcb64fbd0de4294a6a5d4, type: 3}
 --- !u!1 &9024207624431568994
 GameObject:
   m_ObjectHideFlags: 0
@@ -54704,6 +54904,7 @@ GameObject:
   - component: {fileID: 9024207624453802878}
   - component: {fileID: 9024207624453802879}
   - component: {fileID: 9024207624453802876}
+  - component: {fileID: 9024207624453802880}
   m_Layer: 5
   m_Name: Speed V
   m_TagString: Untagged
@@ -54815,6 +55016,30 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &9024207624453802880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9024207624453802866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae864202b0d5ec4cbc824400bf284ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shop: {fileID: 9024207625099663356}
+  main: Base
+  route: Shield
+  index: 4
+  Materials:
+  - {fileID: 21300000, guid: d07db08979fb7a64dbce0b41ca8e97ff, type: 3}
+  - {fileID: 21300000, guid: 00125395fe960ad40bdb362df8c9f5a5, type: 3}
+  - {fileID: 21300000, guid: 4a203c1ec8c56b444966549600f2a80f, type: 3}
+  - {fileID: 21300000, guid: cbf8481b70e7ec64d812443f06c87bf3, type: 3}
+  - {fileID: 21300000, guid: 1560f3d1a39fef148b25b308550bd4bd, type: 3}
+  - {fileID: 21300000, guid: 3ff18866fc628ed438f15f328adad053, type: 3}
+  - {fileID: 21300000, guid: 42c226b347bbcb64fbd0de4294a6a5d4, type: 3}
 --- !u!114 &9024207624458017312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54931,6 +55156,7 @@ GameObject:
   - component: {fileID: 9024207624458017315}
   - component: {fileID: 9024207624458017312}
   - component: {fileID: 9024207624458017313}
+  - component: {fileID: 9024207624458017320}
   m_Layer: 5
   m_Name: Speed I
   m_TagString: Untagged
@@ -54938,6 +55164,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &9024207624458017320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9024207624458017319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae864202b0d5ec4cbc824400bf284ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shop: {fileID: 9024207625099663356}
+  main: Base
+  route: Shield
+  index: 0
+  Materials:
+  - {fileID: 21300000, guid: d07db08979fb7a64dbce0b41ca8e97ff, type: 3}
+  - {fileID: 21300000, guid: 00125395fe960ad40bdb362df8c9f5a5, type: 3}
+  - {fileID: 21300000, guid: 4a203c1ec8c56b444966549600f2a80f, type: 3}
+  - {fileID: 21300000, guid: cbf8481b70e7ec64d812443f06c87bf3, type: 3}
+  - {fileID: 21300000, guid: 1560f3d1a39fef148b25b308550bd4bd, type: 3}
+  - {fileID: 21300000, guid: 3ff18866fc628ed438f15f328adad053, type: 3}
+  - {fileID: 21300000, guid: 42c226b347bbcb64fbd0de4294a6a5d4, type: 3}
 --- !u!222 &9024207624458310496
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -54988,6 +55238,7 @@ GameObject:
   - component: {fileID: 9024207624458310496}
   - component: {fileID: 9024207624458310497}
   - component: {fileID: 9024207624458310502}
+  - component: {fileID: 9024207624458310504}
   m_Layer: 5
   m_Name: Speed II
   m_TagString: Untagged
@@ -55061,6 +55312,30 @@ RectTransform:
   m_AnchoredPosition: {x: -60.70005, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &9024207624458310504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9024207624458310500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae864202b0d5ec4cbc824400bf284ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shop: {fileID: 9024207625099663356}
+  main: Base
+  route: Shield
+  index: 1
+  Materials:
+  - {fileID: 21300000, guid: d07db08979fb7a64dbce0b41ca8e97ff, type: 3}
+  - {fileID: 21300000, guid: 00125395fe960ad40bdb362df8c9f5a5, type: 3}
+  - {fileID: 21300000, guid: 4a203c1ec8c56b444966549600f2a80f, type: 3}
+  - {fileID: 21300000, guid: cbf8481b70e7ec64d812443f06c87bf3, type: 3}
+  - {fileID: 21300000, guid: 1560f3d1a39fef148b25b308550bd4bd, type: 3}
+  - {fileID: 21300000, guid: 3ff18866fc628ed438f15f328adad053, type: 3}
+  - {fileID: 21300000, guid: 42c226b347bbcb64fbd0de4294a6a5d4, type: 3}
 --- !u!222 &9024207624459408408
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -56124,6 +56399,7 @@ GameObject:
   - component: {fileID: 9024207624551213010}
   - component: {fileID: 9024207624551213011}
   - component: {fileID: 9024207624551213008}
+  - component: {fileID: 9024207624551213015}
   m_Layer: 5
   m_Name: Speed I
   m_TagString: Untagged
@@ -56131,6 +56407,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &9024207624551213015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9024207624551213014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae864202b0d5ec4cbc824400bf284ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shop: {fileID: 9024207625099663356}
+  main: MainWeapon
+  route: Damage
+  index: 0
+  Materials:
+  - {fileID: 21300000, guid: d07db08979fb7a64dbce0b41ca8e97ff, type: 3}
+  - {fileID: 21300000, guid: 00125395fe960ad40bdb362df8c9f5a5, type: 3}
+  - {fileID: 21300000, guid: 4a203c1ec8c56b444966549600f2a80f, type: 3}
+  - {fileID: 21300000, guid: cbf8481b70e7ec64d812443f06c87bf3, type: 3}
+  - {fileID: 21300000, guid: 1560f3d1a39fef148b25b308550bd4bd, type: 3}
+  - {fileID: 21300000, guid: 3ff18866fc628ed438f15f328adad053, type: 3}
+  - {fileID: 21300000, guid: 42c226b347bbcb64fbd0de4294a6a5d4, type: 3}
 --- !u!224 &9024207624573964788
 RectTransform:
   m_ObjectHideFlags: 0
@@ -56333,6 +56633,7 @@ GameObject:
   - component: {fileID: 9024207624593549984}
   - component: {fileID: 9024207624593549985}
   - component: {fileID: 9024207624593549990}
+  - component: {fileID: 9024207624593549992}
   m_Layer: 5
   m_Name: Speed IV
   m_TagString: Untagged
@@ -56406,6 +56707,30 @@ RectTransform:
   m_AnchoredPosition: {x: 62.000076, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &9024207624593549992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9024207624593549988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae864202b0d5ec4cbc824400bf284ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shop: {fileID: 9024207625099663356}
+  main: SecondaryWeapons
+  route: Speed
+  index: 3
+  Materials:
+  - {fileID: 21300000, guid: d07db08979fb7a64dbce0b41ca8e97ff, type: 3}
+  - {fileID: 21300000, guid: 00125395fe960ad40bdb362df8c9f5a5, type: 3}
+  - {fileID: 21300000, guid: 4a203c1ec8c56b444966549600f2a80f, type: 3}
+  - {fileID: 21300000, guid: cbf8481b70e7ec64d812443f06c87bf3, type: 3}
+  - {fileID: 21300000, guid: 1560f3d1a39fef148b25b308550bd4bd, type: 3}
+  - {fileID: 21300000, guid: 3ff18866fc628ed438f15f328adad053, type: 3}
+  - {fileID: 21300000, guid: 42c226b347bbcb64fbd0de4294a6a5d4, type: 3}
 --- !u!1 &9024207624606365480
 GameObject:
   m_ObjectHideFlags: 0
@@ -56860,6 +57185,7 @@ GameObject:
   - component: {fileID: 9024207624647880645}
   - component: {fileID: 9024207624647880666}
   - component: {fileID: 9024207624647880667}
+  - component: {fileID: 9024207624647880668}
   m_Layer: 5
   m_Name: Speed III
   m_TagString: Untagged
@@ -56941,6 +57267,30 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &9024207624647880668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9024207624647880665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae864202b0d5ec4cbc824400bf284ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shop: {fileID: 9024207625099663356}
+  main: Base
+  route: Health
+  index: 2
+  Materials:
+  - {fileID: 21300000, guid: d07db08979fb7a64dbce0b41ca8e97ff, type: 3}
+  - {fileID: 21300000, guid: 00125395fe960ad40bdb362df8c9f5a5, type: 3}
+  - {fileID: 21300000, guid: 4a203c1ec8c56b444966549600f2a80f, type: 3}
+  - {fileID: 21300000, guid: cbf8481b70e7ec64d812443f06c87bf3, type: 3}
+  - {fileID: 21300000, guid: 1560f3d1a39fef148b25b308550bd4bd, type: 3}
+  - {fileID: 21300000, guid: 3ff18866fc628ed438f15f328adad053, type: 3}
+  - {fileID: 21300000, guid: 42c226b347bbcb64fbd0de4294a6a5d4, type: 3}
 --- !u!224 &9024207624652889468
 RectTransform:
   m_ObjectHideFlags: 0
@@ -57479,6 +57829,7 @@ GameObject:
   - component: {fileID: 9024207624716509562}
   - component: {fileID: 9024207624716509563}
   - component: {fileID: 9024207624716509560}
+  - component: {fileID: 9024207624716509567}
   m_Layer: 5
   m_Name: Speed II
   m_TagString: Untagged
@@ -57486,6 +57837,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &9024207624716509567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9024207624716509566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae864202b0d5ec4cbc824400bf284ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shop: {fileID: 9024207625099663356}
+  main: MainWeapon
+  route: Damage
+  index: 1
+  Materials:
+  - {fileID: 21300000, guid: d07db08979fb7a64dbce0b41ca8e97ff, type: 3}
+  - {fileID: 21300000, guid: 00125395fe960ad40bdb362df8c9f5a5, type: 3}
+  - {fileID: 21300000, guid: 4a203c1ec8c56b444966549600f2a80f, type: 3}
+  - {fileID: 21300000, guid: cbf8481b70e7ec64d812443f06c87bf3, type: 3}
+  - {fileID: 21300000, guid: 1560f3d1a39fef148b25b308550bd4bd, type: 3}
+  - {fileID: 21300000, guid: 3ff18866fc628ed438f15f328adad053, type: 3}
+  - {fileID: 21300000, guid: 42c226b347bbcb64fbd0de4294a6a5d4, type: 3}
 --- !u!224 &9024207624719659784
 RectTransform:
   m_ObjectHideFlags: 0
@@ -57520,6 +57895,7 @@ GameObject:
   - component: {fileID: 9024207624719660021}
   - component: {fileID: 9024207624719659786}
   - component: {fileID: 9024207624719659787}
+  - component: {fileID: 9024207624719660022}
   m_Layer: 5
   m_Name: Speed III
   m_TagString: Untagged
@@ -57609,6 +57985,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9024207624719659785}
   m_CullTransparentMesh: 1
+--- !u!114 &9024207624719660022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9024207624719659785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae864202b0d5ec4cbc824400bf284ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shop: {fileID: 9024207625099663356}
+  main: MainWeapon
+  route: Damage
+  index: 2
+  Materials:
+  - {fileID: 21300000, guid: d07db08979fb7a64dbce0b41ca8e97ff, type: 3}
+  - {fileID: 21300000, guid: 00125395fe960ad40bdb362df8c9f5a5, type: 3}
+  - {fileID: 21300000, guid: 4a203c1ec8c56b444966549600f2a80f, type: 3}
+  - {fileID: 21300000, guid: cbf8481b70e7ec64d812443f06c87bf3, type: 3}
+  - {fileID: 21300000, guid: 1560f3d1a39fef148b25b308550bd4bd, type: 3}
+  - {fileID: 21300000, guid: 3ff18866fc628ed438f15f328adad053, type: 3}
+  - {fileID: 21300000, guid: 42c226b347bbcb64fbd0de4294a6a5d4, type: 3}
 --- !u!222 &9024207624725912953
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -58231,6 +58631,7 @@ GameObject:
   - component: {fileID: 9024207624853562468}
   - component: {fileID: 9024207624853562469}
   - component: {fileID: 9024207624853562490}
+  - component: {fileID: 9024207624853562492}
   m_Layer: 5
   m_Name: Speed IV
   m_TagString: Untagged
@@ -58304,6 +58705,30 @@ RectTransform:
   m_AnchoredPosition: {x: 62.000076, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &9024207624853562492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9024207624853562488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae864202b0d5ec4cbc824400bf284ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shop: {fileID: 9024207625099663356}
+  main: MainWeapon
+  route: Damage
+  index: 3
+  Materials:
+  - {fileID: 21300000, guid: d07db08979fb7a64dbce0b41ca8e97ff, type: 3}
+  - {fileID: 21300000, guid: 00125395fe960ad40bdb362df8c9f5a5, type: 3}
+  - {fileID: 21300000, guid: 4a203c1ec8c56b444966549600f2a80f, type: 3}
+  - {fileID: 21300000, guid: cbf8481b70e7ec64d812443f06c87bf3, type: 3}
+  - {fileID: 21300000, guid: 1560f3d1a39fef148b25b308550bd4bd, type: 3}
+  - {fileID: 21300000, guid: 3ff18866fc628ed438f15f328adad053, type: 3}
+  - {fileID: 21300000, guid: 42c226b347bbcb64fbd0de4294a6a5d4, type: 3}
 --- !u!224 &9024207624855124924
 RectTransform:
   m_ObjectHideFlags: 0
@@ -59381,6 +59806,7 @@ GameObject:
   - component: {fileID: 9024207624945896735}
   - component: {fileID: 9024207624945896732}
   - component: {fileID: 9024207624945896733}
+  - component: {fileID: 9024207624945896736}
   m_Layer: 5
   m_Name: Speed II
   m_TagString: Untagged
@@ -59470,6 +59896,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9024207624945896723}
   m_CullTransparentMesh: 1
+--- !u!114 &9024207624945896736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9024207624945896723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae864202b0d5ec4cbc824400bf284ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shop: {fileID: 9024207625099663356}
+  main: SecondaryWeapons
+  route: Speed
+  index: 1
+  Materials:
+  - {fileID: 21300000, guid: d07db08979fb7a64dbce0b41ca8e97ff, type: 3}
+  - {fileID: 21300000, guid: 00125395fe960ad40bdb362df8c9f5a5, type: 3}
+  - {fileID: 21300000, guid: 4a203c1ec8c56b444966549600f2a80f, type: 3}
+  - {fileID: 21300000, guid: cbf8481b70e7ec64d812443f06c87bf3, type: 3}
+  - {fileID: 21300000, guid: 1560f3d1a39fef148b25b308550bd4bd, type: 3}
+  - {fileID: 21300000, guid: 3ff18866fc628ed438f15f328adad053, type: 3}
+  - {fileID: 21300000, guid: 42c226b347bbcb64fbd0de4294a6a5d4, type: 3}
 --- !u!114 &9024207624946318416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59573,6 +60023,7 @@ GameObject:
   - component: {fileID: 9024207624946637174}
   - component: {fileID: 9024207624946637175}
   - component: {fileID: 9024207624946637172}
+  - component: {fileID: 9024207624946637176}
   m_Layer: 5
   m_Name: Speed I
   m_TagString: Untagged
@@ -59684,6 +60135,30 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &9024207624946637176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9024207624946636426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae864202b0d5ec4cbc824400bf284ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shop: {fileID: 9024207625099663356}
+  main: SecondaryWeapons
+  route: Damage
+  index: 0
+  Materials:
+  - {fileID: 21300000, guid: d07db08979fb7a64dbce0b41ca8e97ff, type: 3}
+  - {fileID: 21300000, guid: 00125395fe960ad40bdb362df8c9f5a5, type: 3}
+  - {fileID: 21300000, guid: 4a203c1ec8c56b444966549600f2a80f, type: 3}
+  - {fileID: 21300000, guid: cbf8481b70e7ec64d812443f06c87bf3, type: 3}
+  - {fileID: 21300000, guid: 1560f3d1a39fef148b25b308550bd4bd, type: 3}
+  - {fileID: 21300000, guid: 3ff18866fc628ed438f15f328adad053, type: 3}
+  - {fileID: 21300000, guid: 42c226b347bbcb64fbd0de4294a6a5d4, type: 3}
 --- !u!222 &9024207624959459909
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -60100,6 +60575,7 @@ GameObject:
   - component: {fileID: 9024207625019088739}
   - component: {fileID: 9024207625019088736}
   - component: {fileID: 9024207625019088737}
+  - component: {fileID: 9024207625019088744}
   m_Layer: 5
   m_Name: Speed V
   m_TagString: Untagged
@@ -60107,6 +60583,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &9024207625019088744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9024207625019088743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae864202b0d5ec4cbc824400bf284ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shop: {fileID: 9024207625099663356}
+  main: MainWeapon
+  route: Damage
+  index: 4
+  Materials:
+  - {fileID: 21300000, guid: d07db08979fb7a64dbce0b41ca8e97ff, type: 3}
+  - {fileID: 21300000, guid: 00125395fe960ad40bdb362df8c9f5a5, type: 3}
+  - {fileID: 21300000, guid: 4a203c1ec8c56b444966549600f2a80f, type: 3}
+  - {fileID: 21300000, guid: cbf8481b70e7ec64d812443f06c87bf3, type: 3}
+  - {fileID: 21300000, guid: 1560f3d1a39fef148b25b308550bd4bd, type: 3}
+  - {fileID: 21300000, guid: 3ff18866fc628ed438f15f328adad053, type: 3}
+  - {fileID: 21300000, guid: 42c226b347bbcb64fbd0de4294a6a5d4, type: 3}
 --- !u!114 &9024207625022598808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60223,6 +60723,7 @@ GameObject:
   - component: {fileID: 9024207625022598811}
   - component: {fileID: 9024207625022598808}
   - component: {fileID: 9024207625022598809}
+  - component: {fileID: 9024207625022598816}
   m_Layer: 5
   m_Name: Repair
   m_TagString: Untagged
@@ -60230,6 +60731,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &9024207625022598816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9024207625022598815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae864202b0d5ec4cbc824400bf284ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shop: {fileID: 9024207625099663356}
+  main: Base
+  route: Repair
+  index: 0
+  Materials:
+  - {fileID: 21300000, guid: d07db08979fb7a64dbce0b41ca8e97ff, type: 3}
+  - {fileID: 21300000, guid: 00125395fe960ad40bdb362df8c9f5a5, type: 3}
+  - {fileID: 21300000, guid: 4a203c1ec8c56b444966549600f2a80f, type: 3}
+  - {fileID: 21300000, guid: cbf8481b70e7ec64d812443f06c87bf3, type: 3}
+  - {fileID: 21300000, guid: 1560f3d1a39fef148b25b308550bd4bd, type: 3}
+  - {fileID: 21300000, guid: 3ff18866fc628ed438f15f328adad053, type: 3}
+  - {fileID: 21300000, guid: 42c226b347bbcb64fbd0de4294a6a5d4, type: 3}
 --- !u!222 &9024207625033104357
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -60695,6 +61220,7 @@ GameObject:
   - component: {fileID: 9024207625105609606}
   - component: {fileID: 9024207625105609607}
   - component: {fileID: 9024207625105609604}
+  - component: {fileID: 9024207625105609627}
   m_Layer: 5
   m_Name: Speed III
   m_TagString: Untagged
@@ -60702,6 +61228,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &9024207625105609627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9024207625105609626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae864202b0d5ec4cbc824400bf284ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shop: {fileID: 9024207625099663356}
+  main: SecondaryWeapons
+  route: Damage
+  index: 2
+  Materials:
+  - {fileID: 21300000, guid: d07db08979fb7a64dbce0b41ca8e97ff, type: 3}
+  - {fileID: 21300000, guid: 00125395fe960ad40bdb362df8c9f5a5, type: 3}
+  - {fileID: 21300000, guid: 4a203c1ec8c56b444966549600f2a80f, type: 3}
+  - {fileID: 21300000, guid: cbf8481b70e7ec64d812443f06c87bf3, type: 3}
+  - {fileID: 21300000, guid: 1560f3d1a39fef148b25b308550bd4bd, type: 3}
+  - {fileID: 21300000, guid: 3ff18866fc628ed438f15f328adad053, type: 3}
+  - {fileID: 21300000, guid: 42c226b347bbcb64fbd0de4294a6a5d4, type: 3}
 --- !u!1 &9024207625111206626
 GameObject:
   m_ObjectHideFlags: 0
@@ -61435,6 +61985,7 @@ GameObject:
   - component: {fileID: 9024207625187800894}
   - component: {fileID: 9024207625187800895}
   - component: {fileID: 9024207625187800892}
+  - component: {fileID: 9024207625187800896}
   m_Layer: 5
   m_Name: Speed V
   m_TagString: Untagged
@@ -61546,6 +62097,30 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &9024207625187800896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9024207625187800882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae864202b0d5ec4cbc824400bf284ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shop: {fileID: 9024207625099663356}
+  main: SecondaryWeapons
+  route: Damage
+  index: 4
+  Materials:
+  - {fileID: 21300000, guid: d07db08979fb7a64dbce0b41ca8e97ff, type: 3}
+  - {fileID: 21300000, guid: 00125395fe960ad40bdb362df8c9f5a5, type: 3}
+  - {fileID: 21300000, guid: 4a203c1ec8c56b444966549600f2a80f, type: 3}
+  - {fileID: 21300000, guid: cbf8481b70e7ec64d812443f06c87bf3, type: 3}
+  - {fileID: 21300000, guid: 1560f3d1a39fef148b25b308550bd4bd, type: 3}
+  - {fileID: 21300000, guid: 3ff18866fc628ed438f15f328adad053, type: 3}
+  - {fileID: 21300000, guid: 42c226b347bbcb64fbd0de4294a6a5d4, type: 3}
 --- !u!222 &9024207625205155685
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -62198,6 +62773,7 @@ GameObject:
   - component: {fileID: 9024207625289980779}
   - component: {fileID: 9024207625289980776}
   - component: {fileID: 9024207625289980777}
+  - component: {fileID: 9024207625289980784}
   m_Layer: 5
   m_Name: Speed I
   m_TagString: Untagged
@@ -62205,6 +62781,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &9024207625289980784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9024207625289980783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae864202b0d5ec4cbc824400bf284ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shop: {fileID: 9024207625099663356}
+  main: Base
+  route: Health
+  index: 0
+  Materials:
+  - {fileID: 21300000, guid: d07db08979fb7a64dbce0b41ca8e97ff, type: 3}
+  - {fileID: 21300000, guid: 00125395fe960ad40bdb362df8c9f5a5, type: 3}
+  - {fileID: 21300000, guid: 4a203c1ec8c56b444966549600f2a80f, type: 3}
+  - {fileID: 21300000, guid: cbf8481b70e7ec64d812443f06c87bf3, type: 3}
+  - {fileID: 21300000, guid: 1560f3d1a39fef148b25b308550bd4bd, type: 3}
+  - {fileID: 21300000, guid: 3ff18866fc628ed438f15f328adad053, type: 3}
+  - {fileID: 21300000, guid: 42c226b347bbcb64fbd0de4294a6a5d4, type: 3}
 --- !u!1 &9024207625290687314
 GameObject:
   m_ObjectHideFlags: 0
@@ -62356,6 +62956,7 @@ GameObject:
   - component: {fileID: 9024207625321416639}
   - component: {fileID: 9024207625321416636}
   - component: {fileID: 9024207625321416637}
+  - component: {fileID: 9024207625321416640}
   m_Layer: 5
   m_Name: Speed IV
   m_TagString: Untagged
@@ -62445,6 +63046,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9024207625321416627}
   m_CullTransparentMesh: 1
+--- !u!114 &9024207625321416640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9024207625321416627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae864202b0d5ec4cbc824400bf284ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shop: {fileID: 9024207625099663356}
+  main: Base
+  route: Health
+  index: 3
+  Materials:
+  - {fileID: 21300000, guid: d07db08979fb7a64dbce0b41ca8e97ff, type: 3}
+  - {fileID: 21300000, guid: 00125395fe960ad40bdb362df8c9f5a5, type: 3}
+  - {fileID: 21300000, guid: 4a203c1ec8c56b444966549600f2a80f, type: 3}
+  - {fileID: 21300000, guid: cbf8481b70e7ec64d812443f06c87bf3, type: 3}
+  - {fileID: 21300000, guid: 1560f3d1a39fef148b25b308550bd4bd, type: 3}
+  - {fileID: 21300000, guid: 3ff18866fc628ed438f15f328adad053, type: 3}
+  - {fileID: 21300000, guid: 42c226b347bbcb64fbd0de4294a6a5d4, type: 3}
 --- !u!222 &9024207625334451025
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -62865,6 +63490,7 @@ GameObject:
   - component: {fileID: 9024207625444936154}
   - component: {fileID: 9024207625444936155}
   - component: {fileID: 9024207625444936152}
+  - component: {fileID: 9024207625444936159}
   m_Layer: 5
   m_Name: Accuracy
   m_TagString: Untagged
@@ -62872,6 +63498,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &9024207625444936159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9024207625444936158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae864202b0d5ec4cbc824400bf284ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shop: {fileID: 9024207625099663356}
+  main: MainWeapon
+  route: Accuracy
+  index: 0
+  Materials:
+  - {fileID: 21300000, guid: d07db08979fb7a64dbce0b41ca8e97ff, type: 3}
+  - {fileID: 21300000, guid: 00125395fe960ad40bdb362df8c9f5a5, type: 3}
+  - {fileID: 21300000, guid: 4a203c1ec8c56b444966549600f2a80f, type: 3}
+  - {fileID: 21300000, guid: cbf8481b70e7ec64d812443f06c87bf3, type: 3}
+  - {fileID: 21300000, guid: 1560f3d1a39fef148b25b308550bd4bd, type: 3}
+  - {fileID: 21300000, guid: 3ff18866fc628ed438f15f328adad053, type: 3}
+  - {fileID: 21300000, guid: 42c226b347bbcb64fbd0de4294a6a5d4, type: 3}
 --- !u!114 &9024207625460694024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63074,6 +63724,7 @@ GameObject:
   - component: {fileID: 9024207625483603476}
   - component: {fileID: 9024207625483603477}
   - component: {fileID: 9024207625483603498}
+  - component: {fileID: 9024207625483603500}
   m_Layer: 5
   m_Name: Speed V
   m_TagString: Untagged
@@ -63147,6 +63798,30 @@ RectTransform:
   m_AnchoredPosition: {x: 122.60007, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &9024207625483603500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9024207625483603496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae864202b0d5ec4cbc824400bf284ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shop: {fileID: 9024207625099663356}
+  main: Base
+  route: Health
+  index: 4
+  Materials:
+  - {fileID: 21300000, guid: d07db08979fb7a64dbce0b41ca8e97ff, type: 3}
+  - {fileID: 21300000, guid: 00125395fe960ad40bdb362df8c9f5a5, type: 3}
+  - {fileID: 21300000, guid: 4a203c1ec8c56b444966549600f2a80f, type: 3}
+  - {fileID: 21300000, guid: cbf8481b70e7ec64d812443f06c87bf3, type: 3}
+  - {fileID: 21300000, guid: 1560f3d1a39fef148b25b308550bd4bd, type: 3}
+  - {fileID: 21300000, guid: 3ff18866fc628ed438f15f328adad053, type: 3}
+  - {fileID: 21300000, guid: 42c226b347bbcb64fbd0de4294a6a5d4, type: 3}
 --- !u!114 &9024207625501772868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63263,6 +63938,7 @@ GameObject:
   - component: {fileID: 9024207625501772871}
   - component: {fileID: 9024207625501772868}
   - component: {fileID: 9024207625501772869}
+  - component: {fileID: 9024207625501772892}
   m_Layer: 5
   m_Name: Speed II
   m_TagString: Untagged
@@ -63270,6 +63946,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &9024207625501772892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9024207625501772891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae864202b0d5ec4cbc824400bf284ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shop: {fileID: 9024207625099663356}
+  main: Base
+  route: Health
+  index: 1
+  Materials:
+  - {fileID: 21300000, guid: d07db08979fb7a64dbce0b41ca8e97ff, type: 3}
+  - {fileID: 21300000, guid: 00125395fe960ad40bdb362df8c9f5a5, type: 3}
+  - {fileID: 21300000, guid: 4a203c1ec8c56b444966549600f2a80f, type: 3}
+  - {fileID: 21300000, guid: cbf8481b70e7ec64d812443f06c87bf3, type: 3}
+  - {fileID: 21300000, guid: 1560f3d1a39fef148b25b308550bd4bd, type: 3}
+  - {fileID: 21300000, guid: 3ff18866fc628ed438f15f328adad053, type: 3}
+  - {fileID: 21300000, guid: 42c226b347bbcb64fbd0de4294a6a5d4, type: 3}
 --- !u!224 &9024207625509870648
 RectTransform:
   m_ObjectHideFlags: 0
@@ -63657,6 +64357,7 @@ GameObject:
   - component: {fileID: 9024207625561213067}
   - component: {fileID: 9024207625561213064}
   - component: {fileID: 9024207625561213065}
+  - component: {fileID: 9024207625561213072}
   m_Layer: 5
   m_Name: Speed III
   m_TagString: Untagged
@@ -63664,6 +64365,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &9024207625561213072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9024207625561213071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae864202b0d5ec4cbc824400bf284ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shop: {fileID: 9024207625099663356}
+  main: Base
+  route: Shield
+  index: 2
+  Materials:
+  - {fileID: 21300000, guid: d07db08979fb7a64dbce0b41ca8e97ff, type: 3}
+  - {fileID: 21300000, guid: 00125395fe960ad40bdb362df8c9f5a5, type: 3}
+  - {fileID: 21300000, guid: 4a203c1ec8c56b444966549600f2a80f, type: 3}
+  - {fileID: 21300000, guid: cbf8481b70e7ec64d812443f06c87bf3, type: 3}
+  - {fileID: 21300000, guid: 1560f3d1a39fef148b25b308550bd4bd, type: 3}
+  - {fileID: 21300000, guid: 3ff18866fc628ed438f15f328adad053, type: 3}
+  - {fileID: 21300000, guid: 42c226b347bbcb64fbd0de4294a6a5d4, type: 3}
 --- !u!222 &9024207625594510917
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -64080,6 +64805,7 @@ GameObject:
   - component: {fileID: 9024207625620184203}
   - component: {fileID: 9024207625620184200}
   - component: {fileID: 9024207625620184201}
+  - component: {fileID: 9024207625620184208}
   m_Layer: 5
   m_Name: Speed IV
   m_TagString: Untagged
@@ -64087,6 +64813,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &9024207625620184208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9024207625620184207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae864202b0d5ec4cbc824400bf284ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shop: {fileID: 9024207625099663356}
+  main: MainWeapon
+  route: Speed
+  index: 3
+  Materials:
+  - {fileID: 21300000, guid: d07db08979fb7a64dbce0b41ca8e97ff, type: 3}
+  - {fileID: 21300000, guid: 00125395fe960ad40bdb362df8c9f5a5, type: 3}
+  - {fileID: 21300000, guid: 4a203c1ec8c56b444966549600f2a80f, type: 3}
+  - {fileID: 21300000, guid: cbf8481b70e7ec64d812443f06c87bf3, type: 3}
+  - {fileID: 21300000, guid: 1560f3d1a39fef148b25b308550bd4bd, type: 3}
+  - {fileID: 21300000, guid: 3ff18866fc628ed438f15f328adad053, type: 3}
+  - {fileID: 21300000, guid: 42c226b347bbcb64fbd0de4294a6a5d4, type: 3}
 --- !u!222 &9024207625640234913
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -64533,6 +65283,7 @@ GameObject:
   - component: {fileID: 9024207625704700554}
   - component: {fileID: 9024207625704700555}
   - component: {fileID: 9024207625704700552}
+  - component: {fileID: 9024207625704700559}
   m_Layer: 5
   m_Name: Speed IV
   m_TagString: Untagged
@@ -64540,6 +65291,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &9024207625704700559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9024207625704700558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae864202b0d5ec4cbc824400bf284ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shop: {fileID: 9024207625099663356}
+  main: Base
+  route: Shield
+  index: 3
+  Materials:
+  - {fileID: 21300000, guid: d07db08979fb7a64dbce0b41ca8e97ff, type: 3}
+  - {fileID: 21300000, guid: 00125395fe960ad40bdb362df8c9f5a5, type: 3}
+  - {fileID: 21300000, guid: 4a203c1ec8c56b444966549600f2a80f, type: 3}
+  - {fileID: 21300000, guid: cbf8481b70e7ec64d812443f06c87bf3, type: 3}
+  - {fileID: 21300000, guid: 1560f3d1a39fef148b25b308550bd4bd, type: 3}
+  - {fileID: 21300000, guid: 3ff18866fc628ed438f15f328adad053, type: 3}
+  - {fileID: 21300000, guid: 42c226b347bbcb64fbd0de4294a6a5d4, type: 3}
 --- !u!222 &9024207625708658873
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -64582,6 +65357,7 @@ GameObject:
   - component: {fileID: 9024207625708658873}
   - component: {fileID: 9024207625708658878}
   - component: {fileID: 9024207625708658879}
+  - component: {fileID: 9024207625708658880}
   m_Layer: 5
   m_Name: Speed V
   m_TagString: Untagged
@@ -64663,6 +65439,30 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &9024207625708658880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9024207625708658877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae864202b0d5ec4cbc824400bf284ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shop: {fileID: 9024207625099663356}
+  main: SecondaryWeapons
+  route: Speed
+  index: 4
+  Materials:
+  - {fileID: 21300000, guid: d07db08979fb7a64dbce0b41ca8e97ff, type: 3}
+  - {fileID: 21300000, guid: 00125395fe960ad40bdb362df8c9f5a5, type: 3}
+  - {fileID: 21300000, guid: 4a203c1ec8c56b444966549600f2a80f, type: 3}
+  - {fileID: 21300000, guid: cbf8481b70e7ec64d812443f06c87bf3, type: 3}
+  - {fileID: 21300000, guid: 1560f3d1a39fef148b25b308550bd4bd, type: 3}
+  - {fileID: 21300000, guid: 3ff18866fc628ed438f15f328adad053, type: 3}
+  - {fileID: 21300000, guid: 42c226b347bbcb64fbd0de4294a6a5d4, type: 3}
 --- !u!224 &9024207625719147958
 RectTransform:
   m_ObjectHideFlags: 0
@@ -65244,6 +66044,7 @@ GameObject:
   - component: {fileID: 9024207625797659644}
   - component: {fileID: 9024207625797659645}
   - component: {fileID: 9024207625797659634}
+  - component: {fileID: 9024207625797659646}
   m_Layer: 5
   m_Name: Speed III
   m_TagString: Untagged
@@ -65355,6 +66156,30 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &9024207625797659646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9024207625797659632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae864202b0d5ec4cbc824400bf284ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shop: {fileID: 9024207625099663356}
+  main: MainWeapon
+  route: Speed
+  index: 2
+  Materials:
+  - {fileID: 21300000, guid: d07db08979fb7a64dbce0b41ca8e97ff, type: 3}
+  - {fileID: 21300000, guid: 00125395fe960ad40bdb362df8c9f5a5, type: 3}
+  - {fileID: 21300000, guid: 4a203c1ec8c56b444966549600f2a80f, type: 3}
+  - {fileID: 21300000, guid: cbf8481b70e7ec64d812443f06c87bf3, type: 3}
+  - {fileID: 21300000, guid: 1560f3d1a39fef148b25b308550bd4bd, type: 3}
+  - {fileID: 21300000, guid: 3ff18866fc628ed438f15f328adad053, type: 3}
+  - {fileID: 21300000, guid: 42c226b347bbcb64fbd0de4294a6a5d4, type: 3}
 --- !u!224 &9024207625831618512
 RectTransform:
   m_ObjectHideFlags: 0
