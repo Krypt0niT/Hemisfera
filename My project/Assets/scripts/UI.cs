@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using TMPro;
 using UnityEngine;
 
 public class UI : MonoBehaviour
 {
-    [SerializeField] List<GameObject> hodnoty = new List<GameObject>();
+    [SerializeField] List<TextMeshProUGUI> hodnoty;
     manager managerVariables;
     void Start()
     {
@@ -14,9 +15,9 @@ public class UI : MonoBehaviour
 
     void Update()
     {
-        for (int i = 0; i < hodnoty.Count; i++)
+        for(int i = 0; i < hodnoty.Count; i++)
         {
-            hodnoty[i].GetComponent<TextMeshPro>().text = managerVariables.PlayerStats.Materials[i].ToString(); 
+            hodnoty[i].text = managerVariables.PlayerStats.Materials[i].ToString();
         }
     }
 }
