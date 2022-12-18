@@ -35,6 +35,8 @@ public class manager : MonoBehaviour
     public class Player
     {
         public float speed = 5f;
+        public float damage = 10f;
+        public float hardness = 0f;
         public int[] Materials = new int[8] { 0, 0, 0, 0, 0, 0, 0, 0 };
 
     }
@@ -156,7 +158,7 @@ public class manager : MonoBehaviour
         }
         if (raid)
         {
-            print(raidSpawned);
+            //print(raidSpawned);
             if(raidSpawned < RaidPower)
             {
                 raidSpawner += Time.deltaTime;

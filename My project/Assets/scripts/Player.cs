@@ -30,8 +30,7 @@ public class Player : MonoBehaviour
     float idleSpeed = 5;
     int idleIndex = 0;
 
-    public int damage = 10;
-
+    [SerializeField] GameObject shop;
 
     float moveX = 0;
     void Start()
@@ -141,6 +140,7 @@ public class Player : MonoBehaviour
                 else
                     usingArmor = false;
 
+                shop.SetActive(usingArmor);
             }
         }
         else if (other.gameObject.tag == "Rock")
@@ -148,7 +148,7 @@ public class Player : MonoBehaviour
             if(other.gameObject.GetComponent<Rocks>().Health < other.gameObject.GetComponent<Rocks>().MaxHealth) other.gameObject.GetComponentInChildren<HealthBar>().slider.gameObject.SetActive(true);
             if (controls.PlayerAttack)
             {
-                other.gameObject.GetComponent<Rocks>().TakeHit(damage * Time.deltaTime);
+                other.gameObject.GetComponent<Rocks>().TakeHit(managerVariables.PlayerStats.damage * Time.deltaTime);
 
             }
         }
@@ -157,7 +157,7 @@ public class Player : MonoBehaviour
             if (other.gameObject.GetComponent<Coals>().Health < other.gameObject.GetComponent<Coals>().MaxHealth) other.gameObject.GetComponentInChildren<HealthBar>().slider.gameObject.SetActive(true);
             if (controls.PlayerAttack)
             {
-                other.gameObject.GetComponent<Coals>().TakeHit(damage * Time.deltaTime);
+                other.gameObject.GetComponent<Coals>().TakeHit(managerVariables.PlayerStats.damage * Time.deltaTime);
 
             }
         }
@@ -174,6 +174,7 @@ public class Player : MonoBehaviour
         {
             ArmorHint.GetComponent<TextMeshPro>().enabled = false;
             usingArmor = false;
+            shop.SetActive(usingArmor);
         }
         
         else if (other.gameObject.tag == "Rock")
