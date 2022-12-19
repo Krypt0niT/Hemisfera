@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class Shop : MonoBehaviour
+public class Shop : MonoBehaviour, IPointerClickHandler
 {
     manager managerVariables;
     public TextMeshProUGUI Name;
@@ -99,7 +100,10 @@ public class Shop : MonoBehaviour
         managerVariables = GameObject.Find("Manager").GetComponent<manager>();
     }
 
-    
+    public void OnPointerClick(PointerEventData eventData)
+    {
+
+    }
     void Update()
     {
         

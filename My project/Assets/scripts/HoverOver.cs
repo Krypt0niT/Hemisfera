@@ -429,7 +429,7 @@ public class HoverOver : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
                         {
                             if (managerVariables.PlayerStats.Materials[Conv(inp[i].Split(":")[0]) + 1] < Int32.Parse(inp[i].Split(":")[1]))
                             {
-
+                                i = costOn;
                             }
                             else if (i == costOn - 1)
                             {
@@ -462,7 +462,7 @@ public class HoverOver : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
                         {
                             if (managerVariables.PlayerStats.Materials[Conv(inp[i].Split(":")[0]) + 1] < Int32.Parse(inp[i].Split(":")[1]))
                             {
-
+                                i = costOn;
                             }
                             else if (i == costOn - 1)
                             {
@@ -500,7 +500,7 @@ public class HoverOver : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
                         {
                             if (managerVariables.PlayerStats.Materials[Conv(inp[i].Split(":")[0]) + 1] < Int32.Parse(inp[i].Split(":")[1]))
                             {
-
+                                i = costOn;
                             }
                             else if (i == costOn - 1)
                             {
@@ -532,7 +532,7 @@ public class HoverOver : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
                         {
                             if (managerVariables.PlayerStats.Materials[Conv(inp[i].Split(":")[0]) + 1] < Int32.Parse(inp[i].Split(":")[1]))
                             {
-
+                                i = costOn;
                             }
                             else if (i == costOn - 1)
                             {
@@ -568,7 +568,7 @@ public class HoverOver : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
                         {
                             if (managerVariables.PlayerStats.Materials[Conv(inp[i].Split(":")[0]) + 1] < Int32.Parse(inp[i].Split(":")[1]))
                             {
-
+                                i = costOn;
                             }
                             else if (i == costOn - 1)
                             {
@@ -599,7 +599,7 @@ public class HoverOver : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
                         {
                             if (managerVariables.PlayerStats.Materials[Conv(inp[i].Split(":")[0]) + 1] < Int32.Parse(inp[i].Split(":")[1]))
                             {
-
+                                i = costOn;
                             }
                             else if (i == costOn - 1)
                             {
@@ -635,7 +635,7 @@ public class HoverOver : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
                         {
                             if (managerVariables.PlayerStats.Materials[Conv(inp[i].Split(":")[0]) + 1] < Int32.Parse(inp[i].Split(":")[1]))
                             {
-
+                                i = costOn;
                             }
                             else if (i == costOn - 1)
                             {
@@ -663,7 +663,7 @@ public class HoverOver : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
                         {
                             if (managerVariables.PlayerStats.Materials[Conv(inp[i].Split(":")[0]) + 1] < Int32.Parse(inp[i].Split(":")[1]))
                             {
-
+                                i = costOn;
                             }
                             else if (i == costOn - 1)
                             {
@@ -696,7 +696,7 @@ public class HoverOver : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
                         {
                             if (managerVariables.PlayerStats.Materials[Conv(inp[i].Split(":")[0]) + 1] < Int32.Parse(inp[i].Split(":")[1]))
                             {
-
+                                i = costOn;
                             }
                             else if (i == costOn - 1)
                             {
@@ -729,7 +729,7 @@ public class HoverOver : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
                         {
                             if (managerVariables.PlayerStats.Materials[Conv(inp[i].Split(":")[0]) + 1] < Int32.Parse(inp[i].Split(":")[1]))
                             {
-
+                                i = costOn;
                             }
                             else if (i == costOn - 1)
                             {
@@ -764,7 +764,7 @@ public class HoverOver : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
                     {
                         if (managerVariables.PlayerStats.Materials[Conv(inp[i].Split(":")[0]) + 1] < Int32.Parse(inp[i].Split(":")[1]))
                         {
-
+                            i = costOn;
                         }
                         else if (i == costOn - 1)
                         {
@@ -798,7 +798,7 @@ public class HoverOver : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
                         {
                             if (managerVariables.PlayerStats.Materials[Conv(inp[i].Split(":")[0]) + 1] < Int32.Parse(inp[i].Split(":")[1]))
                             {
-
+                                i = costOn;
                             }
                             else if (i == costOn - 1)
                             {
@@ -826,7 +826,7 @@ public class HoverOver : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
                         {
                             if (managerVariables.PlayerStats.Materials[Conv(inp[i].Split(":")[0]) + 1] < Int32.Parse(inp[i].Split(":")[1]))
                             {
-
+                                i = costOn;
                             }
                             else if (i == costOn - 1)
                             {
@@ -862,7 +862,7 @@ public class HoverOver : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
                         {
                             if (managerVariables.PlayerStats.Materials[Conv(inp[i].Split(":")[0]) + 1] < Int32.Parse(inp[i].Split(":")[1]))
                             {
-
+                                i = costOn;
                             }
                             else if (i == costOn - 1)
                             {
@@ -893,7 +893,7 @@ public class HoverOver : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
                         {
                             if (managerVariables.PlayerStats.Materials[Conv(inp[i].Split(":")[0]) + 1] < Int32.Parse(inp[i].Split(":")[1]))
                             {
-
+                                i = costOn;
                             }
                             else if (i == costOn - 1)
                             {
@@ -931,7 +931,7 @@ public class HoverOver : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
                         {
                             if (managerVariables.PlayerStats.Materials[Conv(inp[i].Split(":")[0]) + 1] < Int32.Parse(inp[i].Split(":")[1]))
                             {
-
+                                i = costOn;
                             }
                             else if (i == costOn - 1)
                             {
@@ -960,7 +960,7 @@ public class HoverOver : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
                         {
                             if (managerVariables.PlayerStats.Materials[Conv(inp[i].Split(":")[0]) + 1] < Int32.Parse(inp[i].Split(":")[1]))
                             {
-
+                                i = costOn;
                             }
                             else if (i == costOn - 1)
                             {
@@ -997,7 +997,7 @@ public class HoverOver : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
                         {
                             if (managerVariables.PlayerStats.Materials[Conv(inp[i].Split(":")[0]) + 1] < Int32.Parse(inp[i].Split(":")[1]))
                             {
-
+                                i = costOn;
                             }
                             else if (i == costOn - 1)
                             {
@@ -1028,7 +1028,7 @@ public class HoverOver : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
                         {
                             if (managerVariables.PlayerStats.Materials[Conv(inp[i].Split(":")[0]) + 1] < Int32.Parse(inp[i].Split(":")[1]))
                             {
-
+                                i = costOn;
                             }
                             else if (i == costOn - 1)
                             {
